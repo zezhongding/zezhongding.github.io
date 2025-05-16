@@ -21,6 +21,23 @@
       gtag('config', 'UA-114851970-1');
       gtag('config', 'UA-114851970-2');
     </script>
+	<style>  
+		.news-box {  
+		  height: 180px;  
+		  overflow-y: auto;  
+		  border: 1px solid #ccc;  
+		  padding: 10px;  
+		  background: #fafbfc;  
+		}  
+		/* 可选：美化滚动条 */  
+		.news-box::-webkit-scrollbar {  
+		  width: 8px;  
+		}  
+		.news-box::-webkit-scrollbar-thumb {  
+		  background: #e0e0e0;  
+		  border-radius: 4px;  
+		}  
+	</style>
 	<style type="text/css">
 		body {
 			font: 90%/1.2 Verdana, Arial, Helvetica, sans-serif;
@@ -185,7 +202,6 @@ text-align: justify;
 			<ul>
 				<li>[<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank"><font color=#0aa0c0>S5P, <strong>SIGMOD-24</strong></font></a>]: Streaming Skewness-aware Graph Partitioner</li>
 				<li>[<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank"><font color=#0aa0c0>ClusPar, <strong>TC-25</strong></font></a>]: Streaming Game-Theoretic Graph Partitioner (Journal Extension of [<a href="https://ieeexplore.ieee.org/abstract/document/9835624" target="_blank"><font color=#0aa0c0>CLUGP, <strong>ICDE-22</strong></font></a>])</li>
-				<!-- <li>[<a href="xxxxxx" target="_blank"><font color=#0aa0c0>S5P, <strong>SIGMOD-24</strong></font></a>]: Streaming Skewness-aware Vertex-cut Partitioner</li> -->
 			</ul>
 		</li>
 	<!-- <li>🎯<strong>Hypergraph Partitioning</strong>: How to Partition the Big Hypergraph for Distributed Hypergraph Computing?</li> -->
@@ -193,12 +209,13 @@ text-align: justify;
         <li>🎯<strong>Out-of-Core Systems</strong>: How to Overcome Memory Bound Challenges for Big Data? 
 			<ul>
 				<li>[<a href="https://doi.org/10.1145/3709669" target="_blank"><font color=#0aa0c0>Capsule, <strong>SIGMOD-25</strong></font></a>]: Out-of-Core Graph Training Mechanism</li>
+				<li>[<a href="https://doi.org/10.1145/3709669" target="_blank"><font color=#0aa0c0>SWIFT, <strong>SIGMOD-26</strong></font></a>]: Out-of-Core Temporal Graph Training Mechanism</li>
 			</ul>
 		<!-- <li>🎯<strong>LLM System</strong>: How to Build Efficient and Scalable Systems for LLMs?</li>	 -->
 <li><strong>AI Applications</strong></li>
 <li>🎯<strong>Large Language Models (LLMs)</strong>: How to Utilize LLMs to Enhance Application Performance and Capabilities? 
 	<ul>
-		<li>[<a href="https://arxiv.org/abs/2409.03258" target="_blank"><font color=#0aa0c0>GraphInsight, <strong>arXiv-24</strong></font></a>]: LLM (w/ RAG) for Graph Structure Understanding</li>
+		<li>[<a href="https://arxiv.org/abs/2409.03258" target="_blank"><font color=#0aa0c0>GraphInsight, <strong>ACL-25</strong></font></a>]: LLM (w/ RAG) for Graph Structure Understanding</li>
 		</ul>
 </li>
 <li>
@@ -213,20 +230,23 @@ text-align: justify;
 <!-- <li>🎯Graph Learning 🎯Temporal Graph Learning 🎯Graph Transformer 🎯KG+LLM 🎯Graph Clustering</li> -->
 			</ul>
 			<hr>
-			<h3><a name="news">News</a></h3>
-			<p2> 4/30/2025: Starting over. Go for it! <br/></p2>
-			<p2> 2/10/2025: I have completed my three-month visit at <a href="https://www.comp.hkbu.edu.hk/~db/" target="_blank">HKBU DB Group</a>! Best wishes for the HKBU DB Group! <br/></p2>
-            <p2> 11/1/2024: One paper is accepted by SIGMOD 2025 (CCF-A)! Next station is Berlin, Germany!<br/></p2>
-            <p2> 9/30/2024: One paper is accepted by IEEE Transactions on Computers (CCF-A)!<br /></p2>
-            <p2> 6/13/2024: I give my first conference talk on SIGMOD24 in Santiago, Chile!<br /></p2>
-			<p2> 3/30/2024: Data Darkness Lab is recruiting graduate students for the 2024 year, USTC! Inquiries Welcome!<br /></p2>
-			<p2> 2/23/2024: One paper is accepted by SIGMOD 2024 (CCF-A)! Looking forward to the conference in Santiago, Chile!<br /></p2>
+			<h3><a name="news">News</a></h3>  
+			<div class="news-box">  
+			<p2>5/16/2025: One paper is accepted by ACL 2025 (Main Conference)!<br /></p2>  
+			<p2>2/10/2025: I have completed my three-month visit at <a href="https://www.comp.hkbu.edu.hk/~db/" target="_blank">HKBU DB Group</a>! Best wishes for the HKBU DB Group!<br /></p2>  
+			<p2>11/1/2024: One paper is accepted by SIGMOD 2025! Next station is Berlin, Germany!<br /></p2>  
+			<p2>9/30/2024: One paper is accepted by IEEE Transactions on Computers (My first journal paper)!<br /></p2>  
+			<p2>6/13/2024: I give my first conference talk on SIGMOD 2024 in Santiago, Chile!<br /></p2>  
+			<p2>3/30/2024: Data Darkness Lab is recruiting graduate students, USTC! Inquiries Welcome!<br /></p2>  
+			<p2>2/23/2024: One paper is accepted by SIGMOD 2024 (My first conference paper)! Looking forward to the conference in Santiago, Chile!<br /></p2>  
+			</div> 
 			<hr>
 
 
                 <h3><a name="pub">Selected Publications</a></h3>
             <li class=MsoNormal style="list-style-type: none;"><strong><font color=red><sup>#</sup> indicates co-first authors, * indicates corresponding author</font></strong> </li>	
             <ul class='pub'>
+			<li class=MsoNormal>📄<strong><font color=#0aa0c0>[ACL-25] </font></strong>Yukun Cao, Shuo Han, Zengyi Gao, <strong>Zezhong Ding</strong>, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b> GraphInsight: Unlocking Insights in Large Language Models for Graph Structure Understanding</b>, The Annual Meeting of the Association for Computational Linguistics (Main Conference), 2025. (<a href="xxxx" target="_blank">PDF</a>)(<a href="xxx" target="_blank">Source Code</a>)</li>
             <li class=MsoNormal>📄<strong><font color=#0aa0c0>[SIGMOD-25] </font></strong>Yongan Xiang<sup>#</sup>, <strong>Zezhong Ding<sup>#</sup></strong>, Rui Guo, Shangyou Wang, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b> Capsule: an Out-of-Core Training Mechanism for Colossal GNNs</b>, Proceedings of the ACM on Management of Data 3 (1), 2025. (<a href="https://doi.org/10.1145/3709669" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/Capsule" target="_blank">Source Code</a>)(<a href="https://news.ustc.edu.cn/info/1055/90608.htm" target="_blank">Press Release</a>)</li>
             <li class=MsoNormal>📄<strong><font color=#0aa0c0>[TC-25] </font></strong><strong>Zezhong Ding<sup>#</sup></strong>, Deyu Kong<sup>#</sup>, Zhuoxu Zhang, Xike Xie<sup>*</sup>, Jianliang Xu, <b>ClusPar: A Game-Theoretic Approach for Efficient and Scalable Streaming Edge Partitioning</b>, IEEE Transactions on Computers 74 (1), 2025. (<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/GraphPartitioning" target="_blank">Source Code</a>) </li>
             <li class=MsoNormal><strong><font color=#0aa0c0>📄[SIGMOD-24] </font></strong><strong>Zezhong Ding</strong>, Yongan Xiang, Shangyou Wang, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b>Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning</b>, Proceedings of the ACM on Management of Data 2 (3), 2024. (<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/S5P" target="_blank">Source Code</a>)(<a href="./slides/R31-P4-Ding-1.pdf" target="_blank">Slides</a>)(<a href="https://sz.ustc.edu.cn/xwgg_show/1485.html" target="_blank">Press Release</a>) </li>
