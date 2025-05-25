@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <title>Zezhong Ding's Travel Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font: 90%/1.5 Verdana, Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f4f7fb;
+            color: #2b2b2b;
+        }
+        .container {
+            width: 840px;
+            margin: 40px auto 32px auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 32px rgba(70,90,120,0.10);
+            padding: 38px 50px 30px 50px;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-bottom: 15px;
+            margin-left: 3px;
+            padding: 8px 28px;
+            background-color: #3477D5;
+            color: #fff;
+            border: none;
+            border-radius: 24px;
+            font-size: 17px;
+            font-family: inherit;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 2px 10px rgba(20,80,180,0.08);
+        }
+        .home-btn:hover {
+            background-color: #225397;
+            transform: translateY(-2px) scale(1.04);
+        }
+        h1 {
+            color: #3477D5;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+            font-size: 2.1em;
+            margin-top: 14px;
+            margin-bottom: 0;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            font-size: 1.18em;
+            color: #6579a7;
+            font-family: serif;
+            font-style: italic;
+            font-weight: 400;
+            letter-spacing: .5px;
+        }
+        .remark {
+            text-align: center;
+            font-size: 15px;
+            color: #c44;
+            margin-top: 16px;
+            margin-bottom: 25px;
+        }
+        .year-heading {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #b85c00;
+            background: #fff3e4;
+            border-left: 5px solid #ff9800;
+            border-radius: 5px;
+            margin-top: 26px;
+            margin-bottom: 10px;
+            padding: 7px 0 7px 14px;
+            letter-spacing: 1px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+        .gallery-item {
+            background: #f5faff;
+            border-left: 4px solid #3477d5;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px 0 rgba(0,0,50,0.03);
+            transition: background 0.17s, box-shadow 0.2s;
+            padding: 10px;
+            text-align: center;
+        }
+        .gallery-item:hover {
+            background: #eaf1ff;
+            box-shadow: 0 4px 18px 0 rgba(52,119,213,0.08);
+        }
+        .gallery-item img {
+            width: 96%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 7px;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 7px rgba(52,119,213,0.08);
+        }
+        .img-caption {
+            color: #1f2e56;
+            font-size: 15px;
+            margin-top: 0;
+            margin-bottom: 3px;
+            min-height: 24px;
+        }
+        @media (max-width: 950px) {
+            .container {
+                width: 97vw;
+                padding:18px 6vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="home-btn">🏠 Home</a>
+        <h1>Travel Gallery</h1>
+        <div class="remark">
+            The real voyage of discovery consists not in seeking new landscapes, but in having new eyes. 🌏
+        </div>
+        <!-- <div class="year-heading">2025</div>
+        <ul class="gallery">
+            <li class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Mountains">
+                <div class="img-caption">Lake Louise, Canada</div>
+            </li>
+            <li class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80" alt="Santorini">
+                <div class="img-caption">Santorini, Greece</div>
+            </li>
+            <li class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1465156799763-2c087c332922?auto=format&fit=crop&w=600&q=80" alt="Venice">
+                <div class="img-caption">Venice, Italy</div>
+            </li>
+        </ul> -->
+        <div class="year-heading">2024</div>
+        <ul class="gallery">
+            <li class="gallery-item">
+                <img src="photo/chile2024.jpg" alt="Great Wall">
+                <div class="img-caption">Santiago, Chile@SIGMOD24</div>
+            </li>
+            <li class="gallery-item">
+                <img src="photo/hongkong2024.jpg" alt="New Zealand">
+                <div class="img-caption">Hong Kong, China</div>
+            </li>
+            <li class="gallery-item">
+                <img src="photo/suzhou2024.jpg" alt="Dubai">
+                <div class="img-caption">Suzhou, China</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
