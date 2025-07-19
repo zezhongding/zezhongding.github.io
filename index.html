@@ -132,17 +132,15 @@ text-align: justify;
             padding: 0; */
 			/* font-family: verdana; */
         }
-	    .highlight {
-        text-align: center;
-        font-family: 'Dancing Script', cursive;
-        /* font-size: 20px; */
-        /* font-weight: bold; */
-        color: #0aa0c0;
-        background-color: #f0f8ff;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+.highlight {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #2176a5;    /* 蓝中带青 */
+    background: linear-gradient(90deg, #f7fafc 0%, #e6f6fd 100%);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(33, 118, 165, 0.07);
+}
 	.fancy-font {
 		font-style: italic;
 		font-family: 'Pacifico', cursive;
@@ -192,6 +190,45 @@ text-align: justify;
 .news-list li:hover {
   background: #f0f8ff;
 }
+
+.research-cat {
+  background: #fafafd;  /* 微亮灰白 */
+  border-radius: 12px;
+  margin: 18px 0;
+  padding: 16px 24px 8px 24px;
+  box-shadow: 0 1.5px 8px 0 #e3e6ea78;
+}
+.research-cat-title {
+  font-size: 1.14em;
+  font-weight: bold;
+  color: #097cab;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+.topic-title {
+  margin-left: 7px;
+  font-weight: 600;
+  color: #12477c;
+  font-size: 1em;
+}
+.topic-qa {
+  margin-left: 22px;
+  color: #3b6d86;
+  font-size: 95%;
+  margin-bottom: 0.3em;
+}
+.paper-list {
+  margin-left: 36px;
+  margin-bottom: 0.8em;
+  font-size: 97%;
+  line-height: 1.55;
+  padding-left: 0;
+}
+.paper-link {
+  color: #0aa0c0; font-weight: 500; text-decoration: underline;
+}
+.paper-list li {
+  margin-bottom: 3px;
 }
 	</style>
 	<title>Zezhong Ding's Homepage</title>
@@ -236,48 +273,49 @@ text-align: justify;
 				<a target="_blank" href="https://www.ustc.edu.cn/">University of Science and Technology of China (USTC)</a>, 
 				<!-- <a target="_blank" href="https://sz.ustc.edu.cn/index.html">Suzhou Institute for Advance Research, USTC</a>,  -->
 				supervised by <a target="_blank" href="http://staff.ustc.edu.cn/~xkxie/">Prof. Xike Xie</a>. He was a research assistant at <a target="_blank" href="https://www.comp.hkbu.edu.hk/">Department of Computer Science, Hong Kong Baptist University</a>, from Nov. 2024 to Feb. 2025, working with <a target="_blank" href="https://www.comp.hkbu.edu.hk/~xujl/">Prof. Jianliang Xu</a>. He received his B.Eng. (Hons) degree in Computer Science and Technology from <a target="_blank" href="https://www.ouc.edu.cn/">Ocean University of China</a> in 2022. He has published several research papers in prestigious conferences such as <a target="_blank" href="https://sigmod.org/">ACM SIGMOD</a>.
-			His general research interests mainly focus on the <strong>data management</strong>, <strong>distributed computing</strong>, and <strong>machine learning systems</strong> over big data and large models, particularly big graph data and large language models.
+			His general research interests mainly focus on the <strong>data management</strong>, <strong>machine learning (ML)</strong>, and <strong>computer systems</strong> over big data and large models, particularly big graph data and large language models (LLMs).
 			</p>
             <p><strong><font color=red>📌  Welcome to contact me for any discussion!</font></strong>😊</p>
 			<hr>
 			<h3><a name="research">Research Interests</a></h3>
-<!--     <p style="text-align: justify;">
-         The current structure of my research framework is as follows.
-    </p> -->
 			<ul>
-			<li><strong>Data Management</strong></li>
-		<li>🎯<strong>Large Language Models (LLMs)</strong>: How to Manage Big Graph Data for Enhancing LLMs' ability to understand graphs? 
-	<ul>
-		<li>[<a href="https://arxiv.org/abs/2409.03258" target="_blank"><font color=#0aa0c0>GraphInsight, <strong>ACL-25</strong></font></a>]: LLM (w/ RAG) for Graph Structure Understanding</li>
-		</ul>
-		</li>
-		<li>
-			🎯<strong>Graph Foundation Models (GFMs)</strong>: How to Design Scalable and Efficient GFMs to enhance the Performance and Capabilities of Graph-Related Applications?
-		</li>
-        <li><strong>Distributed Computing</strong></li>
-		<li>🎯<strong>Graph Partitioning</strong>: How to Partition Big Graph Data for Distributed Computing?
+			
+		<div class="research-cat">
+        <div class="research-cat-title">📊 Data Management</div>
+		<li>🎯<strong>Distributed Graph Computing</strong>: How to Partition Big Graph Data for Distributed Computing?
 			<ul>
 				<li>[<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank"><font color=#0aa0c0>S5P, <strong>SIGMOD-24</strong></font></a>]: Streaming Skewness-aware Graph Partitioner</li>
-				<li>[<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank"><font color=#0aa0c0>ClusPar, <strong>TC-25</strong></font></a>]: Streaming Game-Theoretic Graph Partitioner (Journal Extension of [<a href="https://ieeexplore.ieee.org/abstract/document/9835624" target="_blank"><font color=#0aa0c0>CLUGP, <strong>ICDE-22</strong></font></a>])</li>
+				<li>[<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank"><font color=#0aa0c0>ClusPar, <strong>TC-25</strong></font></a>]: Streaming Game-Theoretic Graph Partitioner (Journal Extension for [<a href="https://ieeexplore.ieee.org/abstract/document/9835624" target="_blank"><font color=#0aa0c0>CLUGP, <strong>ICDE-22</strong></font></a>])</li>
 			</ul>
 		</li>
+		</div>
+
+		<div class="research-cat">
+  <div class="research-cat-title">🤖 Machine Learning</div>
+		<li>
+			🎯<strong>Graph ML</strong>: How to Design Scalable and Efficient Graph Models to enhance the Performance and Capabilities of Graph-Related Applications?
+			<ul>
+				<li>[<a href="https://arxiv.org/pdf/2507.11229v1" target="_blank"><font color=#0aa0c0>DuetGraph, <strong>arXiv-25</strong></font></a>]: Knowledge Graph Reasoning with Global-Local Fusion</li>
+			</ul>
+		</li>
+		<li>
+			🎯<strong>LLMs</strong>: How to Enhance LLMs' Reasoning Ability? 
+			<ul>
+			<li>[<a href="https://arxiv.org/abs/2409.03258" target="_blank"><font color=#0aa0c0>GraphInsight, <strong>ACL-25</strong></font></a>]: LLM (w/ RAG) for Graph Structure Understanding</li>
+			</ul>
+		</li>
+		</div>
 
 
-
-	<!-- <li>🎯<strong>Hypergraph Partitioning</strong>: How to Partition the Big Hypergraph for Distributed Hypergraph Computing?</li> -->
-	<li><strong>Machine Learning Systems</strong></li>
-        <li>🎯<strong>Out-of-Core Graph Machine Learining Systems</strong>: How to Overcome Memory Bound Challenges for Big Graph Data? 
+	<div class="research-cat">
+  <div class="research-cat-title">💻 Computer Systems</div>
+        <li>🎯<strong>Graph ML Systems</strong>: How to Overcome Challenges for Training Big Graphs? 
 			<ul>
 				<li>[<a href="https://doi.org/10.1145/3709669" target="_blank"><font color=#0aa0c0>Capsule, <strong>SIGMOD-25</strong></font></a>]: Out-of-Core Graph Training Mechanism</li>
-				<!-- <li>[<a href="xxxx" target="_blank"><font color=#0aa0c0>SWIFT, <strong>SIGMOD-26</strong></font></a>]: Enabling Large-Scale Temporal Graph Learning on a Single Machine</li> -->
-				 <li>[<a href="#" onclick="alert('The manuscript will be released soon.'); return false;" target="_blank"><font color=#0aa0c0>SWIFT, <strong>SIGMOD-26</strong></font></a>]: Enabling Large-Scale Temporal Graph Learning on a Single Machine</li>
+				 <li>[<a href="#" onclick="alert('The manuscript will be released soon.'); return false;" target="_blank"><font color=#0aa0c0>SWIFT, <strong>SIGMOD-26</strong></font></a>]: Out-of-Core Dynamic Graph Training Mechanism</li>
 			</ul>
-		<!-- <li>🎯<strong>LLM System</strong>: How to Build Efficient and Scalable Systems for LLMs?</li>	 -->
-<!-- <li><strong>AI Applications</strong></li> -->
+</div>
 
-<!-- <li>
-	🎯<strong>AI4Sci</strong>: How to Untilize AI for Solving Scientific Problems? 
-</li> -->
 
 
 
@@ -289,7 +327,7 @@ text-align: justify;
   <ul class="news-list">
 	<li>
       <span class="news-date">2025/6/26</span>
-      <span class="news-content">I give my second conference talk on SIGMOD 2025 in Berlin, Germany!</span>
+      <span class="news-content">I give an oral presentation at SIGMOD 2025 in Berlin, Germany!</span>
     </li>
     <li>
       <span class="news-date">2025/5/23</span>
@@ -333,7 +371,7 @@ text-align: justify;
             <li class=MsoNormal style="list-style-type: none;"><strong><font color=red>Remark: <sup>1</sup> indicates co-first authors, * indicates corresponding author</font></strong> </li>	
             <ul class='pub'>
 			<li class=MsoNormal>📄<strong><font color=#0aa0c0>[SIGMOD-26] </font></strong>Rui Guo<sup>1</sup>, <strong>Zezhong Ding<sup>1</sup></strong>, Xike Xie<sup>*</sup>, Jianliang Xu, <b> SWIFT: Enabling Large-Scale Temporal Graph Learning on a Single Machine</b>, Proceedings of the ACM on Management of Data, 2026. (<a href="#" onclick="alert('The manuscript will be released soon.'); return false;" target="_blank">PDF</a>)(<a href="#" onclick="alert('The code will be released soon.'); return false;" target="_blank">Source Code</a>)</li>
-            <li class=MsoNormal>📄<strong><font color=#0aa0c0>[SIGMOD-25] </font></strong>Yongan Xiang<sup>1</sup>, <strong>Zezhong Ding<sup>1</sup></strong>, Rui Guo, Shangyou Wang, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b> Capsule: an Out-of-Core Training Mechanism for Colossal GNNs</b>, Proceedings of the ACM on Management of Data 3 (1), 2025. (<a href="https://doi.org/10.1145/3709669" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/Capsule" target="_blank">Source Code</a>)(<a href="https://github.com/USTC-DataDarknessLab/S5P" target="_blank">Source Code</a>)(<a href="./slides/SIGMOD-Research-16_Capsule.pdf" target="_blank">Slides</a>)(<a href="https://news.ustc.edu.cn/info/1055/90608.htm" target="_blank">Press Release</a>)</li>
+            <li class=MsoNormal>📄<strong><font color=#0aa0c0>[SIGMOD-25] </font></strong>Yongan Xiang<sup>1</sup>, <strong>Zezhong Ding<sup>1</sup></strong>, Rui Guo, Shangyou Wang, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b> Capsule: an Out-of-Core Training Mechanism for Colossal GNNs</b>, Proceedings of the ACM on Management of Data 3 (1), 2025. (<a href="https://doi.org/10.1145/3709669" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/Capsule" target="_blank">Source Code</a>)(<a href="./slides/SIGMOD-Research-16_Capsule.pdf" target="_blank">Slides</a>)(<a href="https://news.ustc.edu.cn/info/1055/90608.htm" target="_blank">Press Release</a>)</li>
             <li class=MsoNormal>📄<strong><font color=#0aa0c0>[TC-25] </font></strong><strong>Zezhong Ding<sup>1</sup></strong>, Deyu Kong<sup>1</sup>, Zhuoxu Zhang, Xike Xie<sup>*</sup>, Jianliang Xu, <b>ClusPar: A Game-Theoretic Approach for Efficient and Scalable Streaming Edge Partitioning</b>, IEEE Transactions on Computers 74 (1), 2025. (<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/GraphPartitioning" target="_blank">Source Code</a>) </li>
             <li class=MsoNormal><strong><font color=#0aa0c0>📄[SIGMOD-24] </font></strong><strong>Zezhong Ding</strong>, Yongan Xiang, Shangyou Wang, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b>Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning</b>, Proceedings of the ACM on Management of Data 2 (3), 2024. (<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/S5P" target="_blank">Source Code</a>)(<a href="./slides/R31-P4-Ding-1.pdf" target="_blank">Slides</a>)(<a href="https://sz.ustc.edu.cn/xwgg_show/1485.html" target="_blank">Press Release</a>) </li>
            </ul>
@@ -354,7 +392,7 @@ text-align: justify;
 <h3><a name="awards">Academic Services</a></h3>
 	I am/was a program committee member/reviewer for the following conferences/journals:
 	<ul>
-       <li> <strong><a href="https://reproducibility.sigmod.org/2025/index.html#organization">SIGMOD 2025 (ARI)</a></strong>, <strong>TKDD 2024</strong>, <strong>NeurIPS 2024</strong>,<strong>ICDE 2024|2025</strong>,<strong>SIGIR 2022</strong></li>
+       <li><a href="https://reproducibility.sigmod.org/2025/index.html#organization">SIGMOD2025(ARI)</a>, TKDD2024, NeurIPS2024, ICDE2024|2025|2026, SIGIR2022</li>
 	</ul>
 	<hr>	
 		<h3><a name="TE">Teaching Experiences</a></h3>
@@ -371,9 +409,9 @@ text-align: justify;
 		</ul>
 <hr>	
     <h3><a name="hobbies">Hobbies</a></h3>
-    Coding 💻, Basketball🏀, Soccer ⚽️, Moive 🎬, Singing 🎤, Snooker 🎱, Swimming 🏊
+    Coding ⭐, Basketball🏀, Soccer ⚽️, Moive 🎬, Singing 🎤, Snooker 🎱, Swimming 🏊
 <hr>
-<h3><a name="name" class="fancy-font2">Love: Ariel@Amsterdam</h3>  
+<h3>💌<a name="name" class="fancy-font2">Love: Ariel@Amsterdam</a> 🏡<a name="name" class="fancy-font2">Hometown: Xindu, Chengdu&Panzhihua@Sichuan</a></h3>  
 <hr>
 
 <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=dadde0&w=650&t=tt&d=20t_lXrDFSf72eHa6OB-NdeLaG36VdFUrzeiCc9hXhs&co=113465&ct=b7b7b7'></script>
