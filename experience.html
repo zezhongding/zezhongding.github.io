@@ -1,20 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
     <title>Academic & Research Profile</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg1: #f7f9fc;
+            --bg2: #ffffff;
+            --grid: rgba(0,0,0,0.02);
+            --text: #2b2f36;
+            --muted: #556070;
+            --title: #1a253c;
+            --brand: #3477d5;
+            --brand-dark: #225397;
+            --card-border: #e7edf4;
+            --card-shadow: rgba(0, 0, 0, 0.05);
+        }
+
+        * { box-sizing: border-box; }
+        html, body { height: 100%; }
+
+        /* 页面整体背景（淡淡的布面感） */
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text);
+            margin: 0;
+            padding: 28px;
+            background:
+                radial-gradient(1200px 800px at 10% -10%, rgba(255,255,255,0.80), transparent 60%),
+                radial-gradient(1400px 900px at 110% 10%, rgba(255,255,255,0.75), transparent 60%),
+                linear-gradient(0deg, var(--grid) 1px, transparent 1px) 0 0/24px 24px,
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0/24px 24px,
+                linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 55%, #f9fbff 100%);
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* 外层白布容器 */
+        .sheet {
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid #eef2f7;
+            box-shadow: 0 14px 40px rgba(16, 24, 40, 0.06);
+            padding: 18px 20px 24px;
+            position: relative;
+            overflow: hidden; /* 防止伪元素外溢 */
+        }
+        .sheet::before,
+        .sheet::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        .sheet::before {
+            background:
+                linear-gradient(0deg, rgba(0,0,0,0.02) 1px, transparent 1px) 0 0/22px 22px,
+                linear-gradient(90deg, rgba(0,0,0,0.015) 1px, transparent 1px) 0 0/22px 22px;
+            mix-blend-mode: multiply;
+            opacity: 0.35;
+        }
+        .sheet::after {
+            background:
+                radial-gradient(800px 360px at 50% -10%, rgba(255,255,255,0.8), transparent 60%),
+                radial-gradient(900px 420px at 50% 110%, rgba(255,255,255,0.7), transparent 60%);
+            opacity: 0.9;
+        }
+/* 顶部 container2 仅用于 Home + 标题，保持现状 */
+/* 去掉白底与阴影，仅保留布局和间距 */
+.container2 {
+    width: 840px;
+    max-width: 100%;
+    margin: 40px auto 24px auto;  /* 与卡片区域的间距 */
+    padding: 0;                   /* 背景去除后，可把内边距交给 sheet-header 或标题自身控制 */
+    background: transparent;      /* 关键：无背景 */
+    border-radius: 0;             /* 关键：无圆角 */
+    box-shadow: none;             /* 关键：无阴影 */
+    border: none;                 /* 若之前有边框，去掉 */
+}
+
+/* 新增：卡片区域的窄列容器，让卡片别太宽 */
+.cards-wrap {
+    max-width: 860px;              /* 控制卡片总宽度（可在 720–860 之间微调） */
+    margin: 0 auto 8px auto;       /* 居中 */
+    padding: 0 16px;               /* 两侧留白，避免贴边 */
+}
+
+/* 卡片自身微调节奏 */
+.card {
+    margin: 18px auto;             /* 上下间距略增，居中 */
+}
+
+/* 让 HKBU/OUC logo 不会拉伸布局，保持视觉 */
+.institution-logo {
+    max-height: 46px;              /* 稍微减小一点 */
+}
+
+/* 白布内边距保持 */
+.sheet {
+    padding: 18px 20px 28px;
+}
+
+/* 小屏响应式：卡片区域放宽为满宽，同时保留最小左右留白 */
+@media (max-width: 860px) {
+    .cards-wrap {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+/* 去掉白底与阴影，仅保留布局和间距 */
+.container2 {
+    width: 840px;
+    max-width: 100%;
+    margin: 40px auto 24px auto;  /* 与卡片区域的间距 */
+    padding: 0;                   /* 背景去除后，可把内边距交给 sheet-header 或标题自身控制 */
+    background: transparent;      /* 关键：无背景 */
+    border-radius: 0;             /* 关键：无圆角 */
+    box-shadow: none;             /* 关键：无阴影 */
+    border: none;                 /* 若之前有边框，去掉 */
+}
+    .institution-logo {
+        max-height: 42px;
+    }
+}
+        /* 使 Home 与 DDL 页面一致的高度与样式 */
         .home-btn {
             display: inline-block;
-            margin-bottom: 15px;
-            margin-left: 3px;
-            padding: 8px 28px;
+            margin-bottom: 18px;     /* 与你提供的参考一致 */
+            margin-left: 3px;        /* 如需与容器齐左，可改为 0 */
+            padding: 8px 28px;       /* 高度由 padding 控制：与参考一致 */
             background-color: #3477D5;
             color: #fff;
             border: none;
-            border-radius: 24px;
-            font-size: 17px;
+            border-radius: 24px;     /* 同参考，胶囊形 */
+            font-size: 17px;         /* 同参考 */
             font-family: inherit;
             cursor: pointer;
             text-decoration: none;
@@ -25,121 +153,168 @@
             background-color: #225397;
             transform: translateY(-2px) scale(1.04);
         }
-        body { 
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6; 
-            background-color: #f4f7f6;
-            margin: 0;
-            padding: 30px;
+        .home-btn:focus-visible {
+            outline: 3px solid rgba(52, 119, 213, 0.35);
+            outline-offset: 2px;
         }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+
         h1 {
+            color: #3477D5;
             text-align: center;
-            color: #2c3e50;
-            margin-bottom: 30px;
+            font-family: 'Pacifico', cursive;
+            font-size: 2.1em;
+            margin-top: 14px;
+            margin-bottom: 0;
+            letter-spacing: 1px;
         }
+
         .card {
             background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.07);
-            padding: 25px;
-            margin-bottom: 25px;
-            overflow: auto; /* To contain the floated logo */
+            border-radius: 14px;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 8px 28px var(--card-shadow);
+            padding: 24px 26px;
+            margin: 16px 4px; /* 与白布内边距协调 */
+            transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+            position: relative;
+            z-index: 0;
         }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+            border-color: #dbe6f2;
+        }
+
         .card-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-            margin-bottom: 15px;
+            gap: 18px;
+            padding-bottom: 14px;
+            margin-bottom: 16px;
+            border-bottom: 1px dashed #e8eef5;
         }
         .card h2 {
             margin: 0;
-            color: #34495e;
-            font-size: 1.5em;
+            color: #21344a;
+            font-size: 1.28rem;
+            font-weight: 700;
+            letter-spacing: 0.2px;
         }
-        .card .period {
-            font-style: italic;
-            color: #7f8c8d;
-            flex-shrink: 0;
-            margin-left: 20px;
-        }
+
         .institution-logo {
             max-height: 50px;
+            display: inline-block;
+            filter: saturate(105%);
         }
-        .card p { margin: 5px 0; }
-        .card ul { margin: 10px 0 0 20px; padding: 0;}
-        .card li { margin-bottom: 5px; }
-        strong { color: #333; }
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .card p { margin: 6px 0; color: var(--muted); }
+        .card p strong { color: #1f2d3d; font-weight: 600; }
+
+        .card ul { margin: 14px 0 0 0; padding-left: 20px; }
+        .card li { margin: 6px 0; color: #394554; }
+
+        a {
+            color: var(--brand);
+            text-decoration: none;
+            transition: color 0.18s ease, text-decoration-color 0.18s ease;
+            text-underline-offset: 2px;
+        }
+        a:hover {
+            color: var(--brand-dark);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 860px) {
+            body { padding: 20px 16px; }
+            h1 { font-size: 1.7rem; }
+            .sheet { padding: 14px 14px 20px; border-radius: 14px; }
+            .card { padding: 20px; border-radius: 12px; }
+            .card-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .logo-group { align-self: flex-start; }
+        }
     </style>
 </head>
 <body>
-    <a href="index.html" class="home-btn">🏠 Home</a>
     <div class="container">
-        <h1>Academic & Research Experiences</h1>
+        <!-- 白布区域开始：把 Home 放到白布里面 -->
+        <div class="sheet">
+            <div class="container2">
+                <a href="index.html" class="home-btn">🏠 Home</a>
+                <h1>Academic & Research Experiences</h1>
+            </div>
 
+    <div class="cards-wrap">
         <!-- USTC Card -->
         <div class="card">
-            <div class="card-header">
-                <div>
-                    <h2>University of Science and Technology of China (USTC)</h2>
-                    <p>Ph.D. Candidate, <a target="ddl" href="ddl.html">Data Darkness Lab (DDL)</a>
-                    </p>
-                    <p><a target="_blank" href="https://saids.ustc.edu.cn/main.htm">School of Artificial Intelligence and Data Science</a></p>
+<div class="card-header">
+                    <div>
+                        <h2>University of Science and Technology of China (USTC)</h2>
+                        <p>Ph.D. Candidate, <a target="ddl" href="ddl.html">Data Darkness Lab (DDL)</a></p>
+                        <p><a target="_blank" href="https://saids.ustc.edu.cn/main.htm">School of Artificial Intelligence and Data Science</a></p>
+                    </div>
+                    <div class="logo-group">
+                        <img src="ustcblue.jpg" alt="USTC Logo" class="institution-logo" />
+                        <img src="Logo1.png" alt="DDL Logo" class="institution-logo" />
+                    </div>
                 </div>
-                <img src="ustcblue.jpg" alt="USTC Logo" class="institution-logo">
-                <img src="Logo1.png" alt="USTC Logo" class="institution-logo">
-            </div>
-            <p><strong>Period:</strong> 2022 – Present</p>
-            <p><strong>Supervisor:</strong> <a target="_blank" href="http://staff.ustc.edu.cn/~xkxie/">Prof. Xike Xie</a></p>
-            <p><strong>Research Focus:</strong> Scalable and Efficient Graph Computing: Key Technologies and System Designs</p>
-            <p><strong>Highlights:</strong></p>
-            <ul>
-                <li>3x SIGMOD, 1x TC, 1x ACL</li>
-                <li>Published the <strong>first SIGMOD</strong> paper with USTC as the sole affiliation in SIGMOD 2024</li>
-                <li>National Scholarship (China)</li>
-            </ul>
+                <p><strong>Period:</strong> 2022 – Present</p>
+                <p><strong>Supervisor:</strong> <a target="_blank" href="http://staff.ustc.edu.cn/~xkxie/">Prof. Xike Xie</a></p>
+                <p><strong>Research Focus:</strong> Scalable and Efficient Graph Computing: Key Technologies and System Designs</p>
+                <p><strong>Highlights:</strong></p>
+                <ul>
+                    <li>3x SIGMOD, 1x TC, 1x ACL</li>
+                    <li>Published the <strong>first SIGMOD</strong> paper with USTC as the sole affiliation in SIGMOD 2024</li>
+                    <li>National Scholarship (China)</li>
+                </ul>
         </div>
-        
+
         <!-- HKBU Card -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h2>Hong Kong Baptist University (HKBU)</h2>
-                    <p>Visiting Student, <a target="_blank" href="https://www.comp.hkbu.edu.hk/">Department of Computer Science</a></p>
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2>Hong Kong Baptist University (HKBU)</h2>
+                        <p>Visiting Student, <a target="_blank" href="https://www.comp.hkbu.edu.hk/">Department of Computer Science</a></p>
+                    </div>
+                    <img src="hkbu.png" alt="HKBU Logo" class="institution-logo" />
                 </div>
-                 <img src="hkbu.png" alt="HKBU Logo" class="institution-logo">
+                <p><strong>Period:</strong> 2024 – 2025</p>
+                <p><strong>Collaborating Supervisor:</strong> <a target="_blank" href="https://www.comp.hkbu.edu.hk/~xujl/">Prof. Jianliang Xu</a></p>
+                <p><strong>Research Focus:</strong> Training of Large-scale Temporal Graphs</p>
+                <p><strong>Highlights:</strong></p>
+                <ul>
+                    <li>1x SIGMOD</li>
+                </ul>
             </div>
-            <p><strong>Period:</strong> 2024 – 2025</p>
-            <p><strong>Collaborating Supervisor:</strong> <a target="_blank" href="https://www.comp.hkbu.edu.hk/~xujl/">Prof. Jianliang Xu</a></p>
-            <p><strong>Research Focus:</strong> Training of Large-scale Temporal Graphs</p>
-            <p><strong>Highlights:</strong></p>
-            <ul>
-                <li>1x SIGMOD</li>
-            </ul>
-        </div>
 
         <!-- OUC Card -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h2>Ocean University of China (OUC)</h2>
-                    <p>Bachelor's Degree, <a target="_blank" href="https://it.ouc.edu.cn/cs/">College of Computer Science and Technology</a></p>
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2>Ocean University of China (OUC)</h2>
+                        <p>Bachelor's Degree, <a target="_blank" href="https://it.ouc.edu.cn/cs/">College of Computer Science and Technology</a></p>
+                    </div>
+                    <img src="ouc.png" alt="OUC Logo" class="institution-logo" />
                 </div>
-                 <img src="ouc.png" alt="OUC Logo" class="institution-logo">
+                <p><strong>Period:</strong> 2018 – 2022</p>
+                <p><strong>Highlights:</strong></p>
+                <ul>
+                    <li>Comprehensive GPA Rank: 1 (for postgraduate recommendation without entrance exam)</li>
+                    <li>National Scholarship (China)</li>
+                </ul>
             </div>
-            <p><strong>Period:</strong> 2018 – 2022</p>
-            <p><strong>Highlights:</strong></p>
-            <ul>
-                <li>Comprehensive GPA Rank: 1 (for postgraduate recommendation without entrance exam)</li>
-                <li>National Scholarship (China)</li>
-            </ul>
         </div>
     </div>
+</div>
 
+
+
+        <!-- 白布区域结束 -->
+    </div>
 </body>
 </html>
