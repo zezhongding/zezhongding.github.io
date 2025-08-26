@@ -21,23 +21,6 @@
       gtag('config', 'UA-114851970-1');
       gtag('config', 'UA-114851970-2');
     </script>
-	<style>  
-		.news-box {  
-		  height: 180px;  
-		  overflow-y: auto;  
-		  border: 1px solid #ccc;  
-		  padding: 10px;  
-		  background: #fafbfc;  
-		}  
-		/* 可选：美化滚动条 */  
-		.news-box::-webkit-scrollbar {  
-		  width: 8px;  
-		}  
-		.news-box::-webkit-scrollbar-thumb {  
-		  background: #e0e0e0;  
-		  border-radius: 4px;  
-		}  
-	</style>
 	<style type="text/css">
 		body {
 			font: 90%/1.2 Verdana, Arial, Helvetica, sans-serif;
@@ -52,13 +35,10 @@
 			font-family: "sans serif";
 			padding: 20px;
 		}
-    :root {
-      --main-bg-color: "red";
-    }
 		.container {
 			width: 960px;
-			margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
-			overflow: hidden; /* this declaration makes the .container understand where the floated columns within ends and contain them */
+			margin: 0 auto;
+			overflow: hidden; 
             padding-top: 30px;
 		}
         #visitor {
@@ -92,144 +72,143 @@
             font: 220 12px/1.5;
         }
         p {
-	    text-align: justify;
+	        text-align: justify;
             font-family: verdana;
             font-size: 16px;
         }
 		pnew {
-		text-align: justify;
-		font-family: verdana;
-		font-size: 16px;
-		font-style: italic;
+			text-align: justify;
+			font-family: verdana;
+			font-size: 16px;
+			font-style: italic;
 		}
-        p2 {
-		text-align: justify;
+        p2, p3 {
+			text-align: justify;
             font-family: verdana;
             font-size: 14px;
         }
-        p3 {
-text-align: justify;
-            font-family: verdana;
-            font-size: 14px;
-        }
-        li p {  text-align: justify;
+        li p {
+			text-align: justify;
 			font: 200 12px/1.5 Georgia, Times New Roman, serif;  
 		} 
-		li {  text-align: justify;
+		li {  
+			text-align: justify;
 			padding: 10px;  
-			/* overflow: auto;   */
 			font-family: verdana;
 		} 
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-			/* font-family: verdana; */
         }
 		ul2 {
             list-style-type: decimal;
-            /* margin: 0;
-            padding: 0; */
-			/* font-family: verdana; */
         }
-.highlight {
-    text-align: center;
-    font-family: 'Dancing Script', cursive;
-    color: #2176a5;    /* 蓝中带青 */
-    background: linear-gradient(90deg, #f7fafc 0%, #e6f6fd 100%);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(33, 118, 165, 0.07);
-}
-	.fancy-font {
-		font-style: italic;
-		font-family: 'Pacifico', cursive;
+		.highlight {
+			text-align: center;
+			font-family: 'Dancing Script', cursive;
+			color: #2176a5;
+			background: linear-gradient(90deg, #f7fafc 0%, #e6f6fd 100%);
+			padding: 10px;
+			border-radius: 8px;
+			box-shadow: 0 4px 12px rgba(33, 118, 165, 0.07);
+		}
+		.fancy-font {
+			font-style: italic;
+			font-family: 'Pacifico', cursive;
         }
 		.fancy-font2 {
-		font-style: italic;
-		font-family: 'Parisienne', cursive;
+			font-style: italic;
+			font-family: 'Parisienne', cursive;
         }
-.news-box {
-  height: 180px;
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  padding: 1px 10px; /* 上下padding减少 */
-  background: #fafbfc;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.news-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.news-list li {
-  margin-bottom: 1px;
-  padding: 1px 1px;
-  border-bottom: 1px dashed #e0e0e0;
-  display: flex;
-  align-items: flex-start;
-  transition: background 0.2s;
-}
-.news-list li:last-child {
-  border-bottom: none;
-}
-.news-date {
-  color: #444f; /* 橙色，更醒目且温暖 */
-  font-weight: bold;
-  font-family: 'Consolas', monospace;
-  min-width: 90px;
-  display: inline-block;
-  margin-right: 10px;
-}
-.news-content {
-  color: #222;
-  font-size: 14px;
-  flex: 1;
-}
-.news-list li:hover {
-  background: #f0f8ff;
-}
+		.news-box {  
+			height: 180px;  
+			overflow-y: auto;  
+			border: 1px solid #ccc;  
+			padding: 1px 10px;
+			background: #fafbfc;  
+			margin-top: 0;
+			margin-bottom: 0;
+		}  
+		.news-box::-webkit-scrollbar { width: 8px; }  
+		.news-box::-webkit-scrollbar-thumb { background: #e0e0e0; border-radius: 4px; }  
+		.news-list { list-style: none; margin: 0; padding: 0; }
+		.news-list li {
+			margin-bottom: 1px;
+			padding: 1px;
+			border-bottom: 1px dashed #e0e0e0;
+			display: flex;
+			align-items: flex-start;
+			transition: background 0.2s;
+		}
+		.news-list li:last-child { border-bottom: none; }
+		.news-date {
+			color: #444f;
+			font-weight: bold;
+			font-family: 'Consolas', monospace;
+			min-width: 90px;
+			display: inline-block;
+			margin-right: 10px;
+		}
+		.news-content { color: #222; font-size: 14px; flex: 1; }
+		.news-list li:hover { background: #f0f8ff; }
 
-.research-cat {
-  background: #fafafd;  /* 微亮灰白 */
-  border-radius: 12px;
-  margin: 18px 0;
-  padding: 16px 24px 8px 24px;
-  box-shadow: 0 1.5px 8px 0 #e3e6ea78;
-}
-.research-cat-title {
-  font-size: 1.14em;
-  font-weight: bold;
-  color: #097cab;
-  margin-bottom: 8px;
-  letter-spacing: 0.5px;
-}
-.topic-title {
-  margin-left: 7px;
-  font-weight: 600;
-  color: #12477c;
-  font-size: 1em;
-}
-.topic-qa {
-  margin-left: 22px;
-  color: #3b6d86;
-  font-size: 95%;
-  margin-bottom: 0.3em;
-}
-.paper-list {
-  margin-left: 36px;
-  margin-bottom: 0.8em;
-  font-size: 97%;
-  line-height: 1.55;
-  padding-left: 0;
-}
-.paper-link {
-  color: #0aa0c0; font-weight: 500; text-decoration: underline;
-}
-.paper-list li {
-  margin-bottom: 3px;
-}
+		/* --- Styles for Collapsible Research Interests (Optimized) --- */
+		.research-section {
+			list-style: none;
+			padding-left: 0;
+		}
+		.research-category {
+			/* No border here, apply it to the toggle button instead for better control */
+		}
+		.research-category-toggle {
+			background-color: transparent;
+			color: #333;
+			cursor: pointer;
+			padding: 15px 5px;
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid #eee; /* Apply border here */
+			text-align: left;
+			outline: none;
+			font-size: 1.1em;
+			font-weight: bold;
+			transition: background-color 0.3s ease;
+		}
+		/* Remove the border from the very last button in the list */
+		.research-section .research-category:last-child .research-category-toggle {
+			border-bottom: none;
+		}
+		.research-category-toggle::after {
+			content: '\002B'; /* PLUS sign */
+			color: #777;
+			font-weight: bold;
+			float: right;
+			margin-left: 5px;
+			transition: transform 0.2s ease-in-out; /* Add smooth rotation */
+		}
+		.research-category-toggle.active::after {
+			content: "\2212"; /* MINUS sign */
+			transform: rotate(180deg); /* Optional: nice rotation effect */
+		}
+		.research-category-toggle:hover {
+			background-color: #f9f9f9;
+		}
+		.research-content-panel {
+			padding: 0 18px; /* Remove top/bottom padding when closed */
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Animate padding too */
+			background-color: white;
+		}
+		.research-content-panel.open {
+			padding: 18px; /* Add padding only when open */
+		}
+		.research-content-panel ul { list-style: none; padding-left: 0; }
+		.research-content-panel ul li { list-style-type: none; padding-left: 0; margin-bottom: 12px; }
+		.research-content-panel ul li ul { padding-left: 20px; margin-top: 5px; }
+		.research-content-panel ul li ul li { margin-bottom: 5px; }
+
 	</style>
 	<title>Zezhong Ding's Homepage</title>
 </head>
@@ -237,10 +216,7 @@ text-align: justify;
 	<div class="container">
 		<div class="sidebar1">
 			<img src="./zezhongding.jpg" width="200" height="248.69" alt="picture" />
-			<!--<img src="./zezhong.jpeg" width="250" height="420" alt="picture" /> -->
-			<!--<li><a href="CV.pdf">My CV</a></li> -->
 			<li><a target="_self" href="https://zezhongding.github.io/">Home</a></li>
-			
 			<li><a href="#research">Research</a></li>
 			<li><a href="#news">News</a></li>
 			<li><a href="#pub">Publications</a></li>
@@ -249,193 +225,176 @@ text-align: justify;
 			<li><a target="Experience" href="experience.html">Experience</a></li>
 		</div>
 
-
 		<div class="content">
-			<h2 style="color:#131a40;font-size:28px;margin-top:0px"><a name="name" class="fancy-font">Zezhong Ding</a> <a  style="font-family:KaiTi"">(丁泽中)</a></h2>
-			<!-- <h2 style="color:#131a40;font-size:20px;margin-top:0px"><a name="name">Ph.D. Candidate</a></h2> -->
+			<h2 style="color:#131a40;font-size:28px;margin-top:0px"><a name="name" class="fancy-font">Zezhong Ding</a> <a style="font-family:KaiTi"">(丁泽中)</a></h2>
 			<pnew class="highlight">My heart is in the data research!</pnew> 
-			<!-- &mdash; Lumiere -->
             <p style="font-family:serif;font-size:16px"> ✉️ Email: zezhongding AT mail DOT ustc DOT edu  DOT cn<br>
-        🏫 University of Science and Technology of China (USTC)<br>
-		<!-- <a target="_blank">🎓 Ph.D.(<a target="_blank" href="https://www.ustc.edu.cn/">USTC</a>)Now; M.Eng.(<a target="_blank" href="https://www.ustc.edu.cn/">USTC</a>)2024; B.Eng., Hons (<a target="_blank" href="https://www.ouc.edu.cn/">OUC</a>)2022.</a> -->
-		<br>
-		<a target="_blank" href="https://scholar.google.com/citations?hl=en&user=k2P5VakAAAAJ">Google Scholar</a>,       	
-		<!-- <a target="_blank" href="https://github.com/zezhongding">DBLP</a>,
-		<a target="_blank" href="https://orcid.org/0000-0002-6286-8679">ORCiD</a>, -->
-		<a target="_blank" href="https://github.com/zezhongding">Github<br></a>
-		</p>
+			🏫 University of Science and Technology of China (USTC)<br>
+			<br>
+			<a target="_blank" href="https://scholar.google.com/citations?hl=en&user=k2P5VakAAAAJ">Google Scholar</a>,       	
+			<a target="_blank" href="https://github.com/zezhongding">Github<br></a>
+			</p>
 			 
 			<img src="./ustcblue.jpg" width="75" height="75" alt="picture"/>
 			<img src="./Logo1.png" width="200" height="75" alt="picture"/>
-				<hr>
-
+			<hr>
 
             <p >  Zezhong is a Ph.D. candidate (successive master-doctor program since 2022) in <a target="ddl" href="ddl.html">Data Darkness Lab (DDL)</a>, <a target="_blank" href="https://saids.ustc.edu.cn/main.htm">School of Artificial Intelligence and Data Science</a>,
 				<a target="_blank" href="https://www.ustc.edu.cn/">University of Science and Technology of China (USTC)</a>, 
-				<!-- <a target="_blank" href="https://sz.ustc.edu.cn/index.html">Suzhou Institute for Advance Research, USTC</a>,  -->
 				supervised by <a target="_blank" href="http://staff.ustc.edu.cn/~xkxie/">Prof. Xike Xie</a>. He was a visiting student at <a target="_blank" href="https://www.comp.hkbu.edu.hk/">Department of Computer Science, Hong Kong Baptist University</a>, from Nov. 2024 to Feb. 2025, working with <a target="_blank" href="https://www.comp.hkbu.edu.hk/~xujl/">Prof. Jianliang Xu</a>. He received his B.Eng. (Hons) degree in Computer Science and Technology from <a target="_blank" href="https://www.ouc.edu.cn/">Ocean University of China</a> in 2022. He has published several research papers in prestigious conferences such as <a target="_blank" href="https://sigmod.org/">ACM SIGMOD</a>.
 			His general research interests mainly focus on the <strong>data management</strong>, <strong>machine learning (ML)</strong>, and <strong>computer systems</strong> over big data and large models, particularly big graph data and large language models (LLMs).
 			</p>
             <p><strong><font color=red>📌  Welcome to contact me for any discussion!</font></strong>😊</p>
 			<hr>
+
+			<!-- ================== RESEARCH INTERESTS SECTION START ================== -->
 			<h3><a name="research">Research Interests</a></h3>
-			<ul>
+			<section class="research-section">
+				<article class="research-category">
+					<button class="research-category-toggle">📊 Data Management</button>
+					<div class="research-content-panel">
+						<ul>
+							<li>🎯<strong>Distributed Graph Computing</strong>: How to Partition Big Graph Data for Distributed Computing?
+								<ul>
+									<li>[<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank"><font color=#0aa0c0>S5P, <strong>SIGMOD-24</strong></font></a>]: Streaming Skewness-aware Graph Partitioner</li>
+									<li>[<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank"><font color=#0aa0c0>ClusPar, <strong>TC-25</strong></font></a>]: Streaming Game-Theoretic Graph Partitioner (Journal Extension for [<a href="https://ieeexplore.ieee.org/abstract/document/9835624" target="_blank"><font color=#0aa0c0>CLUGP, <strong>ICDE-22</strong></font></a>])</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</article>
 			
-		<div class="research-cat">
-        <div class="research-cat-title">📊 Data Management</div>
-		<li>🎯<strong>Distributed Graph Computing</strong>: How to Partition Big Graph Data for Distributed Computing?
-			<ul>
-				<li>[<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank"><font color=#0aa0c0>S5P, <strong>SIGMOD-24</strong></font></a>]: Streaming Skewness-aware Graph Partitioner</li>
-				<li>[<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank"><font color=#0aa0c0>ClusPar, <strong>TC-25</strong></font></a>]: Streaming Game-Theoretic Graph Partitioner (Journal Extension for [<a href="https://ieeexplore.ieee.org/abstract/document/9835624" target="_blank"><font color=#0aa0c0>CLUGP, <strong>ICDE-22</strong></font></a>])</li>
-			</ul>
-		</li>
-		</div>
-
-		<div class="research-cat">
-  <div class="research-cat-title">🤖 Machine Learning</div>
-		<li>
-			🎯<strong>Graph ML</strong>: How to Design Scalable and Efficient Graph Models to enhance the Performance and Capabilities of Graph-Related Applications?
-			<ul>
-				<li>[<a href="https://arxiv.org/pdf/2507.11229v1" target="_blank"><font color=#0aa0c0>DuetGraph, <strong>arXiv-25</strong></font></a>]: Knowledge Graph Reasoning with Global-Local Fusion</li>
-				<li>[<a href="https://www.arxiv.org/pdf/2507.13741" target="_blank"><font color=#0aa0c0>SamGoG, <strong>arXiv-25</strong></font></a>]: Graph-of-Graphs
-	Framework for Graph Classification</li>
-			</ul>
-		</li>
-		<li>
-			🎯<strong>LLMs</strong>: How to Enhance LLMs' Reasoning Ability? 
-			<ul>
-			<li>[<a href="https://arxiv.org/abs/2409.03258" target="_blank"><font color=#0aa0c0>GraphInsight, <strong>ACL-25</strong></font></a>]: LLM (w/ RAG) for Graph Structure Understanding</li>
-			</ul>
-		</li>
-		</div>
-
-
-	<div class="research-cat">
-  <div class="research-cat-title">💻 Computer Systems</div>
-        <li>🎯<strong>Graph ML Systems</strong>: How to Overcome Challenges for Training Big Graphs? 
-			<ul>
-				<li>[<a href="https://doi.org/10.1145/3709669" target="_blank"><font color=#0aa0c0>Capsule, <strong>SIGMOD-25</strong></font></a>]: Out-of-Core Graph Training Mechanism</li>
-				 <li>[<a href="#" onclick="alert('The manuscript will be released soon.'); return false;" target="_blank"><font color=#0aa0c0>SWIFT, <strong>SIGMOD-26</strong></font></a>]: Out-of-Core Dynamic Graph Training Mechanism</li>
-			</ul>
-</div>
-
-
-
-
-<!-- <li>🎯Graph Learning 🎯Temporal Graph Learning 🎯Graph Transformer 🎯KG+LLM 🎯Graph Clustering</li> -->
-			</ul>
+				<article class="research-category">
+					<button class="research-category-toggle">🤖 Machine Learning</button>
+					<div class="research-content-panel">
+						<ul>
+							<li>
+								🎯<strong>Graph ML</strong>: How to Design Scalable and Efficient Graph Models to enhance the Performance and Capabilities of Graph-Related Applications?
+								<ul>
+									<li>[<a href="https://arxiv.org/pdf/2507.11229v1" target="_blank"><font color=#0aa0c0>DuetGraph, <strong>arXiv-25</strong></font></a>]: Knowledge Graph Reasoning with Global-Local Fusion</li>
+									<li>[<a href="https://www.arxiv.org/pdf/2507.13741" target="_blank"><font color=#0aa0c0>SamGoG, <strong>arXiv-25</strong></font></a>]: Graph-of-Graphs Framework for Graph Classification</li>
+								</ul>
+							</li>
+							<li>
+								🎯<strong>LLMs</strong>: How to Enhance LLMs' Reasoning Ability? 
+								<ul>
+								<li>[<a href="https://arxiv.org/abs/2409.03258" target="_blank"><font color=#0aa0c0>GraphInsight, <strong>ACL-25</strong></font></a>]: LLM (w/ RAG) for Graph Structure Understanding</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</article>
+			
+				<article class="research-category">
+					<button class="research-category-toggle">💻 Computer Systems</button>
+					<div class="research-content-panel">
+						<ul>
+							<li>🎯<strong>Graph ML Systems</strong>: How to Overcome Challenges for Training Big Graphs? 
+								<ul>
+									<li>[<a href="https://doi.org/10.1145/3709669" target="_blank"><font color=#0aa0c0>Capsule, <strong>SIGMOD-25</strong></font></a>]: Out-of-Core Graph Training Mechanism</li>
+									<li>[<a href="#" onclick="alert('The manuscript will be released soon.'); return false;" target="_blank"><font color=#0aa0c0>SWIFT, <strong>SIGMOD-26</strong></font></a>]: Out-of-Core Dynamic Graph Training Mechanism</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</article>
+			</section>
+			<!-- ================== RESEARCH INTERESTS SECTION END ================== -->
+			
 			<hr>
-<h3><a name="news">News</a></h3>  
-<div class="news-box">  
-  <ul class="news-list">
-	<li>
-      <span class="news-date">2025/6/26</span>
-      <span class="news-content">I give an oral presentation at SIGMOD 2025 in Berlin, Germany!</span>
-    </li>
-    <li>
-      <span class="news-date">2025/5/23</span>
-      <span class="news-content">One paper is accepted by <b>SIGMOD 2026</b> (Bengaluru, India)!</span>
-    </li>
-    <li>
-      <span class="news-date">2025/5/16</span>
-      <span class="news-content">One paper is accepted by <b>ACL 2025</b> (Main Conference)!</span>
-    </li>
-    <li>
-      <span class="news-date">2025/2/10</span>
-      <span class="news-content">I have completed my three-month visit at <a href="https://www.comp.hkbu.edu.hk/~db/" target="_blank">HKBU DB Group</a>! Best wishes for the HKBU DB Group!</span>
-    </li>
-    <li>
-      <span class="news-date">2024/11/1</span>
-      <span class="news-content">One paper is accepted by <b>SIGMOD 2025</b>! Next station is Berlin, Germany!</span>
-    </li>
-    <li>
-      <span class="news-date">2024/9/30</span>
-      <span class="news-content">One paper is accepted by <b>IEEE Transactions on Computers</b> (My first journal paper)!</span>
-    </li>
-    <li>
-      <span class="news-date">2024/6/13</span>
-      <span class="news-content">I give my first conference talk on SIGMOD 2024 in Santiago, Chile!</span>
-    </li>
-    <li>
-      <span class="news-date">2024/3/30</span>
-      <span class="news-content">Data Darkness Lab is recruiting graduate students, USTC! Inquiries Welcome!</span>
-    </li>
-    <li>
-      <span class="news-date">2024/2/23</span>
-      <span class="news-content">One paper is accepted by <b>SIGMOD 2024</b> (My first conference paper)! Looking forward to the conference in Santiago, Chile!</span>
-    </li>
-  </ul>
-</div>
+			<h3><a name="news">News</a></h3>  
+			<div class="news-box">  
+				<ul class="news-list">
+					<li><span class="news-date">2025/6/26</span><span class="news-content">I give an oral presentation at SIGMOD 2025 in Berlin, Germany!</span></li>
+					<li><span class="news-date">2025/5/23</span><span class="news-content">One paper is accepted by <b>SIGMOD 2026</b> (Bengaluru, India)!</span></li>
+					<li><span class="news-date">2025/5/16</span><span class="news-content">One paper is accepted by <b>ACL 2025</b> (Main Conference)!</span></li>
+					<li><span class="news-date">2025/2/10</span><span class="news-content">I have completed my three-month visit at <a href="https://www.comp.hkbu.edu.hk/~db/" target="_blank">HKBU DB Group</a>! Best wishes for the HKBU DB Group!</span></li>
+					<li><span class="news-date">2024/11/1</span><span class="news-content">One paper is accepted by <b>SIGMOD 2025</b>! Next station is Berlin, Germany!</span></li>
+					<li><span class="news-date">2024/9/30</span><span class="news-content">One paper is accepted by <b>IEEE Transactions on Computers</b> (My first journal paper)!</span></li>
+					<li><span class="news-date">2024/6/13</span><span class="news-content">I give my first conference talk on SIGMOD 2024 in Santiago, Chile!</span></li>
+					<li><span class="news-date">2024/3/30</span><span class="news-content">Data Darkness Lab is recruiting graduate students, USTC! Inquiries Welcome!</span></li>
+					<li><span class="news-date">2024/2/23</span><span class="news-content">One paper is accepted by <b>SIGMOD 2024</b> (My first conference paper)! Looking forward to the conference in Santiago, Chile!</span></li>
+				</ul>
+			</div>
 			<hr>
 
-
-                <h3><a name="pub">Selected Publications</a></h3>
+			<h3><a name="pub">Selected Publications</a></h3>
 				You can find the full list of my publications <a href="pub.html">here</a>, my DBLP entry <a href="https://dblp.org/pid/371/4832.html">here</a> and my Google Scholar entry <a href="https://scholar.google.com/citations?hl=en&user=k2P5VakAAAAJ">here</a>.
             <li class=MsoNormal style="list-style-type: none;"><strong><font color=red>Remark: <sup>1</sup> indicates co-first authors, * indicates corresponding author</font></strong> </li>	
             <ul class='pub'>
-			<li class=MsoNormal><strong><font color=#0aa0c0>📄[SIGMOD-24] </font></strong><strong>Zezhong Ding</strong>, Yongan Xiang, Shangyou Wang, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b>Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning</b>, Proceedings of the ACM on Management of Data 2 (3), 2024. (<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/S5P" target="_blank">Source Code</a>)(<a href="./slides/R31-P4-Ding-1.pdf" target="_blank">Slides</a>)(<a href="https://sz.ustc.edu.cn/xwgg_show/1485.html" target="_blank">Press Release</a>) </li>
-            <li class=MsoNormal>📄<strong><font color=#0aa0c0>[SIGMOD-25] </font></strong>Yongan Xiang, <strong>Zezhong Ding<sup>1</sup></strong>, Rui Guo, Shangyou Wang, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b> Capsule: an Out-of-Core Training Mechanism for Colossal GNNs</b>, Proceedings of the ACM on Management of Data 3 (1), 2025. (<a href="https://doi.org/10.1145/3709669" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/Capsule" target="_blank">Source Code</a>)(<a href="./slides/SIGMOD-Research-16_Capsule.pdf" target="_blank">Slides</a>)(<a href="https://news.ustc.edu.cn/info/1055/90608.htm" target="_blank">Press Release</a>)</li>
-			
-			<li class=MsoNormal>📄<strong><font color=#0aa0c0>[SIGMOD-26] </font></strong>Rui Guo, <strong>Zezhong Ding<sup>1</sup></strong>, Xike Xie<sup>*</sup>, Jianliang Xu, <b> SWIFT: Enabling Large-Scale Temporal Graph Learning on a Single Machine</b>, Proceedings of the ACM on Management of Data 3 (4), 2025. (<a href="#" onclick="alert('The manuscript will be released soon.'); return false;" target="_blank">PDF</a>)(<a href="#" onclick="alert('The code will be released soon.'); return false;" target="_blank">Source Code</a>)</li>
-
-            <!-- <li class=MsoNormal>📄<strong><font color=#0aa0c0>[TC-25] </font></strong><strong>Zezhong Ding<sup>1</sup></strong>, Deyu Kong<sup>1</sup>, Zhuoxu Zhang, Xike Xie<sup>*</sup>, Jianliang Xu, <b>ClusPar: A Game-Theoretic Approach for Efficient and Scalable Streaming Edge Partitioning</b>, IEEE Transactions on Computers 74 (1), 2025. (<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/GraphPartitioning" target="_blank">Source Code</a>) </li> -->
-
+				<li class=MsoNormal><strong><font color=#0aa0c0>📄[SIGMOD-24] </font></strong><strong>Zezhong Ding</strong>, Yongan Xiang, Shangyou Wang, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b>Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning</b>, Proceedings of the ACM on Management of Data 2 (3) (CCF-A), 2024. (<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/S5P" target="_blank">Source Code</a>)(<a href="./slides/R31-P4-Ding-1.pdf" target="_blank">Slides</a>)(<a href="https://sz.ustc.edu.cn/xwgg_show/1485.html" target="_blank">Press Release</a>) </li>			
+				<li class=MsoNormal>
+					<strong><font color=#0aa0c0>📄[TC-25] </font></strong>
+					<strong>Zezhong Ding</strong>, Deyu Kong, Zhuoxu Zhang, Xike Xie<sup>*</sup>, Jianliang Xu,
+					<b>ClusPar: A Game-Theoretic Approach for Efficient and Scalable Streaming Edge Partitioning</b>,
+					IEEE Transactions on Computers 74 (1) (CCF-A), 2025.
+					(<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank">PDF</a>)
+					(<a href="https://github.com/USTC-DataDarknessLab/GraphPartitioning" target="_blank">Source Code</a>)
+				</li>
+				<li class=MsoNormal><strong><font color=#0aa0c0>📄[SIGMOD-25] </font></strong>Yongan Xiang, <strong>Zezhong Ding<sup>1</sup></strong>, Rui Guo, Shangyou Wang, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b> Capsule: an Out-of-Core Training Mechanism for Colossal GNNs</b>, Proceedings of the ACM on Management of Data 3 (1) (CCF-A), 2025. (<a href="https://doi.org/10.1145/3709669" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/Capsule" target="_blank">Source Code</a>)(<a href="./slides/SIGMOD-Research-16_Capsule.pdf" target="_blank">Slides</a>)(<a href="https://news.ustc.edu.cn/info/1055/90608.htm" target="_blank">Press Release</a>)</li>
+				<li class=MsoNormal><strong><font color=#0aa0c0>📄[SIGMOD-26] </font></strong>Rui Guo, <strong>Zezhong Ding<sup>1</sup></strong>, Xike Xie<sup>*</sup>, Jianliang Xu, <b> SWIFT: Enabling Large-Scale Temporal Graph Learning on a Single Machine</b>, Proceedings of the ACM on Management of Data 3 (4) (CCF-A), 2025. (<a href="#" onclick="alert('The manuscript will be released soon.'); return false;" target="_blank">PDF</a>)(<a href="#" onclick="alert('The code will be released soon.'); return false;" target="_blank">Source Code</a>)</li>
            </ul>
-
-<hr>
+			<hr>
 	
-	<h3><a name="awards">Selected Awards</a></h3>
-	<ul>
-	<li><strong>National Scholarship (China)</strong> (three times, in 2019, 2021, and 2024)</li>
-	<li><strong>Gold Medal </strong> in <a href="https://igem.org/" target="_blank">International Genetically Engineered Machine Competition</a> (2021)</li>
-	<!-- <li><strong>Gold Medal 🥇</strong> in International Genetically Engineered Machine Competition (2021)</li> -->
-	<li><strong>Finalist (Nomination for Grand Prize)</strong> in <a href="https://www.comap.com/contests/mcm-icm" target="_blank">MCM (USA)</a> (Top 1%, 2021)</li>
-    <!-- <li><strong>AEON Scholarship</strong> (2020)</li> -->
-    <!-- <li><strong>Outstanding Graduate (Undergraduate)</strong> (2022)</li> -->
-	</ul>
-    <hr>
-	<!--  -->
-<h3><a name="awards">Academic Services</a></h3>
-	I am/was a program committee member/reviewer for the following conferences/journals:
-	<ul>
-       <li><a href="https://reproducibility.sigmod.org/2025/index.html#organization">SIGMOD2025(ARI)</a>, TKDD2024, NeurIPS2024, ICDE2024|2025|2026, SIGIR2022</li>
-	</ul>
-	<hr>	
-		<h3><a name="TE">Teaching Experiences</a></h3>
-		<ul>
-			<li>
-				<strong>Undergraduate Teaching Assistant (TA) at Ocean University of China:</strong>
-				Object-Oriented Programming (2020),
-				High-level Programming Language (2020, 2021),
-				Data Structures and Algorithms (2021),
-				Introduction to Computer Systems (2021),
-				Computer Network (2021),
-				Numerical Analysis (2021)
-			</li>
-		</ul>
-<hr>	
-    <h3><a name="hobbies">Hobbies</a></h3>
-    Coding ⭐, Basketball🏀, Soccer ⚽️, Moive 🎬, Singing 🎤, Snooker 🎱, Swimming 🏊
-<hr>
-<h3>💌<a name="name" class="fancy-font2">Love: Ariel@Amsterdam</a> 🏡<a name="name" class="fancy-font2">Hometown: Xindu, Chengdu&Panzhihua@Sichuan</a></h3>  
-<hr>
+			<h3><a name="awards">Selected Awards</a></h3>
+			<ul>
+				<li><strong>National Scholarship (China)</strong> (three times, in 2019, 2021, and 2024)</li>
+				<li><strong>Gold Medal </strong> in <a href="https://igem.org/" target="_blank">International Genetically Engineered Machine Competition</a> (2021)</li>
+				<li><strong>Finalist (Nomination for Grand Prize)</strong> in <a href="https://www.comap.com/contests/mcm-icm" target="_blank">MCM (USA)</a> (Top 1%, 2021)</li>
+			</ul>
+			<hr>
+			
+			<h3><a name="services">Academic Services</a></h3>
+			<ul>
+			   <li><a href="https://reproducibility.sigmod.org/2025/index.html#organization">SIGMOD2025(ARI)</a>, TKDD2024, NeurIPS2024, ICDE2024|2025|2026, SIGIR2022</li>
+			</ul>
+			<hr>	
+			
+			<h3><a name="TE">Teaching Experiences</a></h3>
+			<ul>
+				<li>
+					<strong>Undergraduate Teaching Assistant (TA) at Ocean University of China:</strong>
+					Object-Oriented Programming (2020),
+					High-level Programming Language (2020, 2021),
+					Data Structures and Algorithms (2021),
+					Introduction to Computer Systems (2021),
+					Computer Network (2021),
+					Numerical Analysis (2021)
+				</li>
+			</ul>
+			<hr>	
 
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=dadde0&w=650&t=tt&d=20t_lXrDFSf72eHa6OB-NdeLaG36VdFUrzeiCc9hXhs&co=113465&ct=b7b7b7'></script>
+			<h3><a name="hobbies">Hobbies</a></h3>
+			Coding ⭐, Basketball🏀, Soccer ⚽️, Moive 🎬, Singing 🎤, Snooker 🎱, Swimming 🏊
+			<hr>
+			
+			<h3>💌<a name="love" class="fancy-font2">Love: Ariel@Amsterdam</a> 🏡<a name="hometown" class="fancy-font2">Hometown: Xindu, Chengdu&Panzhihua@Sichuan</a></h3>  
+			<hr>
 
-			<p> <p>
-			<p> <p>
-			<p> <p>
-			<p> <p>
-			<p> <p>
-			<p> <p>
-			<p> <p>
-			<p> <p>
-			<p> <p>
-			<p> <p>
-			<p> <p>
-			<p> <p>
-			</div>
+			<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=dadde0&w=650&t=tt&d=20t_lXrDFSf72eHa6OB-NdeLaG36VdFUrzeiCc9hXhs&co=113465&ct=b7b7b7'></script>
+
+			<div style="padding-bottom: 200px;"></div> <!-- Add space at the bottom -->
 		</div>
+	</div>
 
-	</body>
-	</html>
+	<script>
+	// --- JavaScript for Collapsible Functionality (Optimized) ---
+	var toggles = document.getElementsByClassName("research-category-toggle");
+	for (var i = 0; i < toggles.length; i++) {
+		toggles[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			
+			// Use a class to control the open state for smoother animation
+			if (content.classList.contains('open')) {
+				content.classList.remove('open');
+				content.style.maxHeight = null;
+			} else {
+				content.classList.add('open');
+				content.style.maxHeight = content.scrollHeight + "px";
+			} 
+		});
+	}
+	</script>
+</body>
+</html>
