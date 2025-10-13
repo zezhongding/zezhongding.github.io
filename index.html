@@ -215,7 +215,8 @@
 <body>
 	<div class="container">
 		<div class="sidebar1">
-			<img src="./zezhongding.jpg" width="200" height="248.69" alt="picture" />
+			<!-- <img src="./zezhongnew.jpg" width="200" height="248.69" alt="picture" /> -->
+			<img src="./zezhongnew.jpg" width="200" height="210" alt="picture" />
 			<li><a target="_self" href="https://zezhongding.github.io/">Home</a></li>
 			<li><a href="#research">Research</a></li>
 			<li><a href="#news">News</a></li>
@@ -255,8 +256,9 @@
 						<ul>
 							<li>🎯<strong>Graph Partitioning</strong>: How to Partition Big Graphs?
 								<ul>
-									<li>[<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank"><font color=#0aa0c0>S5P, <strong>SIGMOD-24</strong></font></a>]: Streaming Skewness-aware Graph Partitioner</li>
-									<li>[<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank"><font color=#0aa0c0>ClusPar, <strong>TC-25</strong></font></a>]: Streaming Game-Theoretic Graph Partitioner (Journal Extension for [<a href="https://ieeexplore.ieee.org/abstract/document/9835624" target="_blank"><font color=#0aa0c0>CLUGP, <strong>ICDE-22</strong></font></a>])</li>
+									<li>[<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank"><font color=#0aa0c0>S5P, <strong>SIGMOD-24</strong></font></a>]: (1) Streaming Skewness-aware Graph Partitioner based on Stackelberg Game; (2) Play-and-Plug Integration with the Downstream Distributed Graph Computing System (e.g., PowerGraph)</li>
+									<li>[<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank"><font color=#0aa0c0>ClusPar, <strong>TC-25</strong></font></a>]: (1) Streaming Edge Clustering; (2) Play-and-Plug Integration with the Downstream Distributed Graph Computing System (e.g., PowerGraph)</li>
+									<!-- (Journal Extension for [<a href="https://ieeexplore.ieee.org/abstract/document/9835624" target="_blank"><font color=#0aa0c0>CLUGP, <strong>ICDE-22</strong></font></a>]) -->
 								</ul>
 							</li>
 						</ul>
@@ -270,14 +272,15 @@
 							<li>
 								🎯<strong>Graph Machine Learning</strong>: How to Design Graph Machine Learning Models?
 								<ul>
-									<li>[<a href="https://arxiv.org/abs/2507.11229" target="_blank"><font color=#0aa0c0>DuetGraph, <strong>NeurIPS-25</strong></font></a>]: Knowledge Graph Reasoning Model</li>
-									<li>[<a href="https://www.arxiv.org/pdf/2507.13741" target="_blank"><font color=#0aa0c0>SamGoG, <strong>arXiv-25</strong></font></a>]:  Graph Classification Model</li>
+									<li>[<a href="https://arxiv.org/abs/2507.11229" target="_blank"><font color=#0aa0c0>DuetGraph, <strong>NeurIPS-25</strong></font></a>]: (1) Knowledge Graph Reasoning Model with Attention and Message Passing Modules; (2) Addressing the Over-Smoothing Challenge </li>
+									<li>[<a href="https://www.arxiv.org/pdf/2507.13741" target="_blank"><font color=#0aa0c0>SamGoG, <strong>arXiv-25</strong></font></a>]: (1) Sampled Graph-of-Graphs for Graph Classification; (2) Addressing the Imbalance Challenge</li>
 								</ul>
 							</li>
 							<li>
 								🎯<strong>LLMs</strong>: How to Enhance LLMs' Reasoning Ability? 
 								<ul>
-								<li>[<a href="https://arxiv.org/abs/2409.03258" target="_blank"><font color=#0aa0c0>GraphInsight, <strong>ACL-25</strong></font></a>]: LLM (w/ RAG) for Graph Structure Understanding</li>
+								<li>[<a href="https://arxiv.org/abs/2409.03258" target="_blank"><font color=#0aa0c0>GraphInsight, <strong>ACL-25</strong></font></a>]: (1) Importance-based Strategy for Regions with Stronger Memory Performance; (2) RAG for Regions with Weaker Memory Performance</li>
+								<!-- <li>[<a href="https://arxiv.org/abs/2409.03258" target="_blank"><font color=#0aa0c0>GraphVista, <strong>arXiv-25</strong></font></a>]: (1) Multimodal Graph Understanding; (2) Reinforcement Learning for Chain-of-Thought Generation</li> -->
 								</ul>
 							</li>
 						</ul>
@@ -290,7 +293,7 @@
 						<ul>
 							<li>🎯<strong>Graph Training Systems</strong>: How to  Train Big Graphs? 
 								<ul>
-									<li>[<a href="https://doi.org/10.1145/3709669" target="_blank"><font color=#0aa0c0>Capsule, <strong>SIGMOD-25</strong></font></a>]: Out-of-Core Graph Training System</li>
+									<li>[<a href="https://doi.org/10.1145/3709669" target="_blank"><font color=#0aa0c0>Capsule, <strong>SIGMOD-25</strong></font></a>]: (1) Out-of-Core Graph Training Mechanism; (2) Play-and-Plug Implementation for DGL and PyG</li>
 									<li>[<a href="https://dl.acm.org/doi/10.1145/3749184" target="_blank"><font color=#0aa0c0>SWIFT, <strong>SIGMOD-26</strong></font></a>]: Out-of-Core Dynamic Graph Training System</li>
 								</ul>
 							</li>
@@ -322,22 +325,22 @@
 				You can find the full list of my publications <a href="pub.html">here</a>, my DBLP entry <a href="https://dblp.org/pid/371/4832.html">here</a> and my Google Scholar entry <a href="https://scholar.google.com/citations?hl=en&user=k2P5VakAAAAJ">here</a>.
             <li class=MsoNormal style="list-style-type: none;"><strong><font color=red>Remark: <sup>1</sup> indicates co-first authors, * indicates corresponding author</font></strong> </li>	
             <ul class='pub'>
-				<li class=MsoNormal><strong><font color=#0aa0c0>📄[SIGMOD-24] </font></strong><strong>Zezhong Ding</strong>, Yongan Xiang, Shangyou Wang, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b>Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning</b>, Proceedings of the ACM on Management of Data 2 (3) <strong><span style="color: #1B3A8A;">(CCF-A)</span></strong>, 2024. (<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/S5P" target="_blank">Code</a>)(<a href="./slides/R31-P4-Ding-1.pdf" target="_blank">Slides</a>)(<a href="https://sz.ustc.edu.cn/xwgg_show/1485.html" target="_blank">Press</a>) </li>			
+				<li class=MsoNormal><strong><font color=#0aa0c0>📄[SIGMOD-24] </font></strong><strong>Zezhong Ding</strong>, Yongan Xiang, Shangyou Wang, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b>Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning</b>, Proceedings of the ACM on Management of Data <strong><span style="color: #1B3A8A;">(CCF-A)</span></strong>. (<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/S5P" target="_blank">Code</a>)(<a href="./slides/R31-P4-Ding-1.pdf" target="_blank">Slides</a>)(<a href="https://sz.ustc.edu.cn/xwgg_show/1485.html" target="_blank">Press</a>) </li>			
 				<li class=MsoNormal>
 					<strong><font color=#0aa0c0>📄[TC-25] </font></strong>
 					<strong>Zezhong Ding</strong>, Deyu Kong, Zhuoxu Zhang, Xike Xie<sup>*</sup>, Jianliang Xu,
 					<b>ClusPar: A Game-Theoretic Approach for Efficient and Scalable Streaming Edge Partitioning</b>,
-					IEEE Transactions on Computers 74 (1) <strong><span style="color: #1B3A8A;">(CCF-A)</span></strong>, 2025.
+					IEEE Transactions on Computers <strong><span style="color: #1B3A8A;">(CCF-A)</span></strong>.
 					(<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/GraphPartitioning" target="_blank">Code</a>)
 				</li>
-				<li class=MsoNormal><strong><font color=#0aa0c0>📄[SIGMOD-25] </font></strong>Yongan Xiang, <strong>Zezhong Ding<sup>1</sup></strong>, Rui Guo, Shangyou Wang, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b> Capsule: an Out-of-Core Training Mechanism for Colossal GNNs</b>, Proceedings of the ACM on Management of Data 3 (1) <strong><span style="color: #1B3A8A;">(CCF-A)</span></strong>, 2025. (<a href="https://doi.org/10.1145/3709669" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/Capsule" target="_blank">Code</a>)(<a href="./slides/SIGMOD-Research-16_Capsule.pdf" target="_blank">Slides</a>)(<a href="https://news.ustc.edu.cn/info/1055/90608.htm" target="_blank">Press</a>)</li>
-				<li class=MsoNormal><strong><font color=#0aa0c0>📄[SIGMOD-26] </font></strong>Rui Guo, <strong>Zezhong Ding<sup>1</sup></strong>, Xike Xie<sup>*</sup>, Jianliang Xu, <b> SWIFT: Enabling Large-Scale Temporal Graph Learning on a Single Machine</b>, Proceedings of the ACM on Management of Data 3 (4) <strong><span style="color: #1B3A8A;">(CCF-A)</span></strong>, 2025. (<a href="https://dl.acm.org/doi/10.1145/3749184"  target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/SWIFT" target="_blank">Code</a>)</li>
+				<li class=MsoNormal><strong><font color=#0aa0c0>📄[SIGMOD-25] </font></strong>Yongan Xiang, <strong>Zezhong Ding<sup>1</sup></strong>, Rui Guo, Shangyou Wang, Xike Xie<sup>*</sup>, S. Kevin Zhou, <b> Capsule: an Out-of-Core Training Mechanism for Colossal GNNs</b>, Proceedings of the ACM on Management of Data <strong><span style="color: #1B3A8A;">(CCF-A)</span></strong>. (<a href="https://doi.org/10.1145/3709669" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/Capsule" target="_blank">Code</a>)(<a href="./slides/SIGMOD-Research-16_Capsule.pdf" target="_blank">Slides</a>)(<a href="https://news.ustc.edu.cn/info/1055/90608.htm" target="_blank">Press</a>)</li>
+				<li class=MsoNormal><strong><font color=#0aa0c0>📄[SIGMOD-26] </font></strong>Rui Guo, <strong>Zezhong Ding<sup>1</sup></strong>, Xike Xie<sup>*</sup>, Jianliang Xu, <b> SWIFT: Enabling Large-Scale Temporal Graph Learning on a Single Machine</b>, Proceedings of the ACM on Management of Data <strong><span style="color: #1B3A8A;">(CCF-A)</span></strong>. (<a href="https://dl.acm.org/doi/10.1145/3749184"  target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/SWIFT" target="_blank">Code</a>)</li>
 				<li class=MsoNormal>
 					<strong><font color=#0aa0c0>📄[NeurIPS-25] </font></strong>
 					Jin Li, <strong>Zezhong Ding<sup>1</sup></strong>, Xike Xie<sup>*</sup>,
 					<b>DuetGraph: Coarse-to-Fine Knowledge Graph
 Reasoning with Dual-Pathway Global-Local Fusion</b>,
-					Advances in Neural Information Processing Systems <strong><span style="color: #1B3A8A;">(CCF-A)</span></strong>, 2025.
+					Advances in Neural Information Processing Systems <strong><span style="color: #1B3A8A;">(CCF-A)</span></strong>.
 					(<a href="https://arxiv.org/abs/2507.11229" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/DuetGraph.git" target="_blank">Code</a>)
 				</li>
            </ul>
