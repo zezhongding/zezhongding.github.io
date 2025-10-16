@@ -117,6 +117,58 @@
                 padding:18px 6vw;
             }
         }
+
+        /* 🔍 图片放大模态框样式 */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 999;
+            padding-top: 60px; 
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            overflow: auto; 
+            background: rgba(0,0,0,0.85);
+            animation: fadeIn 0.3s ease;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.15);
+            animation: zoomIn 0.25s ease;
+        }
+        #imgCaption {
+            margin: 15px auto;
+            text-align: center;
+            color: #ddd;
+            font-style: italic;
+            font-size: 16px;
+        }
+        .modal .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 38px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .modal .close:hover {
+            color: #ff9800;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @keyframes zoomIn {
+            from {transform: scale(0.9);}
+            to {transform: scale(1);}
+        }
     </style>
 </head>
 <body>
@@ -144,57 +196,109 @@
         <div class="year-heading">2025</div>
         <ul class="gallery">
             <li class="gallery-item">
-                <img src="photo/zurich2025.png" alt="Zurich">
+                <img src="photo/Burg Eltz2025.jpg" alt="Burg Eltz, Germany">
+                <div class="img-caption">Burg Eltz, Germany</div>
+            </li>
+            <li class="gallery-item">
+                <img src="photo/Pompeii2025.jpg" alt="Pompeii, Italy">
+                <div class="img-caption">Pompeii, Italy</div>
+            </li>
+            <li class="gallery-item">
+                <img src="photo/Vatican City2025.jpg" alt="Vatican City, Italy">
+                <div class="img-caption">Vatican City, Italy</div>
+            </li>
+            <li class="gallery-item">
+                <img src="photo/zurich2025.png" alt="Zurich, Switzerland">
                 <div class="img-caption">Zurich, Switzerland</div>
             </li>
             <li class="gallery-item">
-                <img src="photo/Luzern2025.jpg" alt="Luzern">
+                <img src="photo/Luzern2025.jpg" alt="Luzern, Switzerland">
                 <div class="img-caption">Luzern, Switzerland</div>
             </li>
             <li class="gallery-item">
-                <img src="photo/chongqing2025.jpg" alt="Chongqing">
+                <img src="photo/chongqing2025.jpg" alt="Chongqing, China">
                 <div class="img-caption">Chongqing, China</div>
             </li>
             <li class="gallery-item">
-                <img src="photo/berlin2025.jpg" alt="Great Wall">
+                <img src="photo/berlin2025.jpg" alt="Berlin, Germany@SIGMOD25">
                 <div class="img-caption">Berlin, Germany@SIGMOD25</div>
             </li>
             <li class="gallery-item">
-                <img src="photo/berlinwall2025.jpg" alt="New Zealand">
+                <img src="photo/berlinwall2025.jpg" alt="Berlin Wall, Germany">
                 <div class="img-caption">Berliner Mauer, Germany</div>
             </li>
             <li class="gallery-item">
-                <img src="photo/BerlinerDom.jpg" alt="Dubai">
+                <img src="photo/BerlinerDom.jpg" alt="Berliner Dom, Germany">
                 <div class="img-caption">Berliner Dom, Germany</div>
             </li>
         </ul>
         <div class="year-heading">2024</div>
         <ul class="gallery">
             <li class="gallery-item">
-                <img src="photo/chile2024.jpg" alt="Great Wall">
+                <img src="photo/chile2024.jpg" alt="Santiago, Chile@SIGMOD24">
                 <div class="img-caption">Santiago, Chile@SIGMOD24</div>
             </li>
             <li class="gallery-item">
-                <img src="photo/hongkong2024.jpg" alt="New Zealand">
+                <img src="photo/hongkong2024.jpg" alt="Hong Kong, China">
                 <div class="img-caption">Hong Kong, China</div>
             </li>
             <li class="gallery-item">
-                <img src="photo/suzhou2024.jpg" alt="Dubai">
+                <img src="photo/suzhou2024.jpg" alt="Suzhou, China">
                 <div class="img-caption">Suzhou, China</div>
             </li>
-                        <li class="gallery-item">
-                <img src="photo/Casablanca2024.jpg" alt="Great Wall">
+            <li class="gallery-item">
+                <img src="photo/Casablanca2024.jpg" alt="Casablanca, Chile">
                 <div class="img-caption">Casablanca, Chile</div>
             </li>
             <li class="gallery-item">
-                <img src="photo/ViñadelMar2024.jpg" alt="New Zealand">
+                <img src="photo/ViñadelMar2024.jpg" alt="Viña del Mar, Chile">
                 <div class="img-caption">Viña del Mar, Chile</div>
             </li>
             <li class="gallery-item">
-                <img src="photo/valparaiso2024.jpg" alt="Dubai">
+                <img src="photo/valparaiso2024.jpg" alt="Valparaíso, Chile">
                 <div class="img-caption">Valparaíso, Chile</div>
             </li>
         </ul>
     </div>
+
+
+<!-- ====================== 图片放大模态框结构 ====================== -->
+<div id="imgModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="imgModalContent">
+    <div id="imgCaption"></div>
+</div>
+
+<!-- ====================== JS逻辑 ====================== -->
+<script>
+    // 获取所有图片
+    const images = document.querySelectorAll('.gallery-item img');
+    const modal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('imgModalContent');
+    const captionText = document.getElementById('imgCaption');
+    const closeBtn = document.querySelector('.modal .close');
+
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.textContent = img.alt || img.parentNode.querySelector('.img-caption')?.textContent || "";
+            document.body.style.overflow = 'hidden';  // 防止背景滚动
+        });
+    });
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+        document.body.style.overflow = 'auto';
+    };
+
+    modal.onclick = function(e) {
+        // 点击模态框背景关闭
+        if (e.target === modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+    };
+</script>    
 </body>
 </html>
