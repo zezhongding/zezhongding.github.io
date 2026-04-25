@@ -110,8 +110,8 @@
 			color: #2176a5;
 			background: linear-gradient(90deg, #f7fafc 0%, #e6f6fd 100%);
 			padding: 10px;
-			border-radius: 8px;
-			box-shadow: 0 4px 12px rgba(33, 118, 165, 0.07);
+			border-radius: 0px;
+			box-shadow: 0 4px 0px rgba(33, 118, 165, 0.07);
 		}
 		.fancy-font {
 			font-style: italic;
@@ -164,48 +164,25 @@
 		.research-category-toggle {
 			background-color: transparent;
 			color: #333;
-			cursor: pointer;
-			padding: 15px 5px;
+			padding: 8px 5px;
 			width: 100%;
 			border: none;
-			border-bottom: 1px solid #eee; /* Apply border here */
+			border-bottom: 1px solid #eee;
 			text-align: left;
 			outline: none;
 			font-size: 1.1em;
 			font-weight: bold;
-			transition: background-color 0.3s ease;
+			margin: 0;
 		}
-		/* Remove the border from the very last button in the list */
 		.research-section .research-category:last-child .research-category-toggle {
 			border-bottom: none;
 		}
-		.research-category-toggle::after {
-			content: '\002B'; /* PLUS sign */
-			color: #777;
-			font-weight: bold;
-			float: right;
-			margin-left: 5px;
-			transition: transform 0.2s ease-in-out; /* Add smooth rotation */
-		}
-		.research-category-toggle.active::after {
-			content: "\2212"; /* MINUS sign */
-			transform: rotate(180deg); /* Optional: nice rotation effect */
-		}
-		.research-category-toggle:hover {
-			background-color: #f9f9f9;
-		}
 		.research-content-panel {
-			padding: 0 18px; /* Remove top/bottom padding when closed */
-			max-height: 0;
-			overflow: hidden;
-			transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Animate padding too */
+			padding: 12px 18px;
 			background-color: white;
 		}
-		.research-content-panel.open {
-			padding: 18px; /* Add padding only when open */
-		}
 		.research-content-panel ul { list-style: none; padding-left: 0; }
-		.research-content-panel ul li { list-style-type: none; padding-left: 0; margin-bottom: 12px; }
+		.research-content-panel ul li { list-style-type: none; padding: 4px 0; margin-bottom: 6px; }
 		.research-content-panel ul li ul { padding-left: 20px; margin-top: 5px; }
 		.research-content-panel ul li ul li { margin-bottom: 5px; }
 
@@ -240,30 +217,49 @@
 			<img src="./DDLlogo.png" width="200" height="75" alt="picture"/>
 			<hr>
 			<h3><a>$ whoami</a></h3>  
-            <p >  Zezhong (aka Zeddy) is a Ph.D. candidate (successive master-doctor program since 2022) in <a target="ddl" href="ddl.html">Data Darkness Lab (DDL)</a>, <a target="_blank" href="https://saids.ustc.edu.cn/main.htm">School of Artificial Intelligence and Data Science</a>,
+            <p >  Zezhong (aka Zeddy) is a Ph.D. candidate (successive master-doctor program since 2022) in the <a target="ddl" href="ddl.html">Data Darkness Lab (DDL)</a> at the <a target="_blank" href="https://saids.ustc.edu.cn/main.htm">School of Artificial Intelligence and Data Science</a>,
 				<a target="_blank" href="https://www.ustc.edu.cn/">University of Science and Technology of China (USTC)</a>, 
-				supervised by <a target="_blank" href="http://staff.ustc.edu.cn/~xkxie/">Prof. Xike Xie</a>. He was a visiting student at <a target="_blank" href="https://www.comp.hkbu.edu.hk/">Department of Computer Science, Hong Kong Baptist University</a>, from 2024 to 2025, working with <a target="_blank" href="https://www.comp.hkbu.edu.hk/~xujl/">Prof. Jianliang Xu</a>. He received his B.Eng. (Hons) degree in Computer Science and Technology from <a target="_blank" href="https://www.ouc.edu.cn/">Ocean University of China</a> in 2022. He has published several research papers in prestigious conferences and journals such as <a target="_blank" href="https://sigmod.org/">SIGMOD</a>, <a target="_blank" href="https://www.kdd.org/">SIGKDD</a>, <a target="_blank" href="https://neurips.cc/">NeurIPS</a>, <a target="_blank" href="https://aclanthology.org/venues/acl/">ACL</a>, and <a target="_blank" href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=12">TC</a>.
-			His general research interests mainly focus on the <strong>data management</strong>, <strong>machine learning</strong>, and <strong>computer systems</strong> over big data and large models, particularly big graph data and large language models.
+				supervised by <a target="_blank" href="http://staff.ustc.edu.cn/~xkxie/">Prof. Xike Xie</a>. He was a visiting student at the <a target="_blank" href="https://www.comp.hkbu.edu.hk/">Department of Computer Science, Hong Kong Baptist University</a>, from 2024 to 2025, working with <a target="_blank" href="https://www.comp.hkbu.edu.hk/~xujl/">Prof. Jianliang Xu</a>. He received his B.Eng. (Hons) degree in Computer Science and Technology from <a target="_blank" href="https://www.ouc.edu.cn/">Ocean University of China</a> in 2022. He has published several research papers in prestigious conferences and journals such as <a target="_blank" href="https://sigmod.org/">SIGMOD</a>, <a target="_blank" href="https://www.kdd.org/">SIGKDD</a>, <a target="_blank" href="https://neurips.cc/">NeurIPS</a>, <a target="_blank" href="https://aclanthology.org/venues/acl/">ACL</a>, and <a target="_blank" href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=12">TC</a>.
+			His general research interests mainly focus on the <strong>data management</strong>, <strong>machine learning</strong>, and <strong>computer systems</strong> for big data and large models, particularly big graph data and large language models.
 			</p>
             <p><strong><font>$ echo "📌Welcome to contact me for any discussion!</font></strong>😊"</p>
 			<hr>
 			<!-- ================== RESEARCH INTERESTS SECTION START ================== -->
 			<h3><a name="research">$ head research_interests</a></h3>
 			<section class="research-section">
-				<article class="research-category">
-					<button class="research-category-toggle">📊 Data Management</button>
+				<li>🎯<strong>Graph Partitioning Algorithms for Distributed Computing</strong>
+								<ul>
+									<li> Graph Partitioning (Streaming): [<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank"><font color=#0aa0c0>S5P, <strong>SIGMOD-24</strong></font></a>], [<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank"><font color=#0aa0c0>ClusPar, <strong>TC-25</strong></font></a>]</li>
+									<li> Hypergraph Partitioning: [<a href="https://dl.acm.org/doi/pdf/10.1145/3770854.3780266" target="_blank"><font color=#0aa0c0>SIGHP, <strong>SIGKDD-26</strong></font></a>]</li>	
+								</ul>
+							</li>
+							<li>
+								🎯<strong>Graph Machine Learning Algorithms</strong>
+								<ul>
+									<li>Graph Transformer: [<a href="https://arxiv.org/abs/2507.11229" target="_blank"><font color=#0aa0c0>DuetGraph, <strong>NeurIPS-25</strong></font></a>]</li>
+									<li>Message Passing Neural Networks: [<a href="https://www.arxiv.org/pdf/2507.13741" target="_blank"><font color=#0aa0c0>SamGoG, <strong>arXiv-25</strong></font></a>]</li>
+								</ul>
+							</li>
+							<li>
+								🎯<strong>LLM Reasoning Algorithms</strong>
+								<ul>
+								<li>Retrieval-Augmented Generation: [<a href="https://arxiv.org/abs/2409.03258" target="_blank"><font color=#0aa0c0>GraphInsight, <strong>ACL-25</strong></font></a>]</li> 
+								<li>Agentic Reasoning: [<a href="https://arxiv.org/pdf/2510.16769" target="_blank"><font color=#0aa0c0>GraphVista, <strong>ACL-26-Findings</strong></font></a>]</li> 
+								</ul>
+							</li>
+							<li>🎯<strong>Large Scale Graph Training Systems</strong>
+								<ul>
+									<li>Out-of-Core Graph Training: [<a href="https://doi.org/10.1145/3709669" target="_blank"><font color=#0aa0c0>Capsule, <strong>SIGMOD-25</strong></font></a>],[<a href="https://dl.acm.org/doi/10.1145/3749184" target="_blank"><font color=#0aa0c0>SWIFT, <strong>SIGMOD-26</strong></font></a>]</li>
+								</ul>
+							</li>
+				<!-- <article class="research-category">
+					<h4 class="research-category-toggle">📊 Graph Data Management</h4>
 					<div class="research-content-panel">
 						<ul>
 							<li>🎯<strong>Graph/Hypergraph Partitioning</strong>: How to Partition Big Graphs/Hypergraphs?
 								<ul>
 									<li> Graph Partitioning: [<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank"><font color=#0aa0c0>S5P, <strong>SIGMOD-24</strong></font></a>], [<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank"><font color=#0aa0c0>ClusPar, <strong>TC-25</strong></font></a>]</li>
-									<li> Hypergraph Partitioning: [<a href="xxx" target="_blank"><font color=#0aa0c0>SIGHP, <strong>SIGKDD-26</strong></font></a>]</li>	
-						
-									<!-- <li>[<a href="xxx" target="_blank"><font color=#0aa0c0>SIGHP, <strong>SIGKDD-26</strong></font></a>]: (1) Information Theory-based Hypergraph Partitioner; (2) Play-and-Plug Integration with the Downstream Distributed  hyperraph Computing System</li> -->
-									<!-- <li>[<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank"><font color=#0aa0c0>S5P, <strong>SIGMOD-24</strong></font></a>]: (1) Streaming Skewness-aware Graph Partitioner based on Stackelberg Game; (2) Play-and-Plug Integration with the Downstream Distributed Graph Computing System (e.g., PowerGraph)</li>
-									<li>[<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank"><font color=#0aa0c0>ClusPar, <strong>TC-25</strong></font></a>]: (1) Streaming Edge Clustering; (2) Play-and-Plug Integration with the Downstream Distributed Graph Computing System (e.g., PowerGraph)</li>
-									<li>[<a href="xxx" target="_blank"><font color=#0aa0c0>SIGHP, <strong>SIGKDD-26</strong></font></a>]: (1) Information Theory-based Hypergraph Partitioner; (2) Play-and-Plug Integration with the Downstream Distributed  hyperraph Computing System</li> -->
-									<!-- (Journal Extension for [<a href="https://ieeexplore.ieee.org/abstract/document/9835624" target="_blank"><font color=#0aa0c0>CLUGP, <strong>ICDE-22</strong></font></a>]) -->
+									<li> Hypergraph Partitioning: [<a href="https://dl.acm.org/doi/pdf/10.1145/3770854.3780266" target="_blank"><font color=#0aa0c0>SIGHP, <strong>SIGKDD-26</strong></font></a>]</li>	
 								</ul>
 							</li>
 						</ul>
@@ -271,7 +267,7 @@
 				</article>
 			
 				<article class="research-category">
-					<button class="research-category-toggle">🤖 Machine Learning</button>
+					<h4 class="research-category-toggle">🤖 Machine Learning</h4>
 					<div class="research-content-panel">
 						<ul>
 							<li>
@@ -279,16 +275,12 @@
 								<ul>
 									<li>Graph Transformer: [<a href="https://arxiv.org/abs/2507.11229" target="_blank"><font color=#0aa0c0>DuetGraph, <strong>NeurIPS-25</strong></font></a>]</li>
 									<li>Imbalanced Graph Learning: [<a href="https://www.arxiv.org/pdf/2507.13741" target="_blank"><font color=#0aa0c0>SamGoG, <strong>arXiv-25</strong></font></a>]</li>
-									<!-- <li>[<a href="https://arxiv.org/abs/2507.11229" target="_blank"><font color=#0aa0c0>DuetGraph, <strong>NeurIPS-25</strong></font></a>]: (1) Knowledge Graph Reasoning Model with Attention and Message Passing Modules; (2) Addressing the Over-Smoothing Challenge </li> -->
-									<!-- <li>[<a href="https://www.arxiv.org/pdf/2507.13741" target="_blank"><font color=#0aa0c0>SamGoG, <strong>arXiv-25</strong></font></a>]: (1) Sampled Graph-of-Graphs for Graph Classification; (2) Addressing the Imbalance Challenge</li> -->
 								</ul>
 							</li>
 							<li>
 								🎯<strong>LLMs</strong>: How to Enhance LLMs' Reasoning Ability? 
 								<ul>
 								<li>LLM for Graph Understanding: [<a href="https://arxiv.org/abs/2409.03258" target="_blank"><font color=#0aa0c0>GraphInsight, <strong>ACL-25</strong></font></a>], [<a href="https://arxiv.org/pdf/2510.16769" target="_blank"><font color=#0aa0c0>GraphVista, <strong>ACL-26-Findings</strong></font></a>]</li> 
-								<!-- <li>[<a href="https://arxiv.org/abs/2409.03258" target="_blank"><font color=#0aa0c0>GraphInsight, <strong>ACL-25</strong></font></a>]: (1) Importance-based Strategy for Regions with Stronger Memory Performance; (2) RAG for Regions with Weaker Memory Performance</li>
-								<li>[<a href="https://arxiv.org/pdf/2510.16769" target="_blank"><font color=#0aa0c0>GraphVista, <strong>arXiv-25</strong></font></a>]: (1) Multimodal Graph Understanding; (2) Reinforcement Learning for Chain-of-Thought Generation</li> -->
 								</ul>
 							</li>
 						</ul>
@@ -296,20 +288,18 @@
 				</article>
 			
 				<article class="research-category">
-					<button class="research-category-toggle">💻 Computer Systems</button>
+					<h4 class="research-category-toggle">💻 Computer Systems</h4>
 					<div class="research-content-panel">
 						<ul>
 							<li>🎯<strong>Graph Training Systems</strong>: How to  Train Big Graphs? 
 								<ul>
 									<li>Static Graph Training: [<a href="https://doi.org/10.1145/3709669" target="_blank"><font color=#0aa0c0>Capsule, <strong>SIGMOD-25</strong></font></a>]</li>
 									<li>Dynamic Graph Training: [<a href="https://dl.acm.org/doi/10.1145/3749184" target="_blank"><font color=#0aa0c0>SWIFT, <strong>SIGMOD-26</strong></font></a>]</li>
-									<!-- <li>[<a href="https://doi.org/10.1145/3709669" target="_blank"><font color=#0aa0c0>Capsule, <strong>SIGMOD-25</strong></font></a>]: (1) Out-of-Core Graph Training Mechanism; (2) Play-and-Plug Implementation for DGL and PyG</li>
-									<li>[<a href="https://dl.acm.org/doi/10.1145/3749184" target="_blank"><font color=#0aa0c0>SWIFT, <strong>SIGMOD-26</strong></font></a>]: (1) Out-of-Core Dynamic Graph Training System; (2) Storage Optimization</li> -->
 								</ul>
 							</li>
 						</ul>
 					</div>
-				</article>
+				</article> -->
 			</section>
 			<!-- ================== RESEARCH INTERESTS SECTION END ================== -->
 			
@@ -334,17 +324,19 @@
 			<hr>
 
 			<h3><a name="pub">$ head publications</a></h3>
-				You can find the full list of my publications <a href="pub.html">here</a>, my DBLP entry <a href="https://dblp.org/pid/371/4832.html">here</a> and my Google Scholar entry <a href="https://scholar.google.com/citations?hl=en&user=k2P5VakAAAAJ">here</a>.
+				You can find the full list of my publications <a href="pub.html">here</a>
+				<!-- , my DBLP entry <a href="https://dblp.org/pid/371/4832.html">here</a> and  -->
+				and my Google Scholar entry <a href="https://scholar.google.com/citations?hl=en&user=k2P5VakAAAAJ">here</a>.
             <!-- <li class=MsoNormal style="list-style-type: none;"><strong><font color=#1B3A8A>Remark: <sup>1</sup> indicates co-first authors, * indicates corresponding author</font></strong> </li>	 -->
 			 <!-- <strong><span style="color: #1B3A8A;">(CCF-A)</span></strong> -->
             <ul class='pub'>
-				<li class=MsoNormal><strong><font color=#0aa0c0>[SIGMOD-24] </font></strong><strong><u>Zezhong Ding</u></strong>, Yongan Xiang, Shangyou Wang, Xike Xie, S. Kevin Zhou, <b>Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning</b>. (<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/S5P" target="_blank">Code</a>)(<a href="./slides/R31-P4-Ding-1.pdf" target="_blank">Slides</a>)(<a href="https://sz.ustc.edu.cn/xwgg_show/1485.html" target="_blank">Press</a>) </li>	
-				<li class=MsoNormal><strong><font color=#0aa0c0>[TC-25]</font></strong> <strong><u>Zezhong Ding</u></strong>, Deyu Kong, Zhuoxu Zhang, Xike Xie, Jianliang Xu, <b>ClusPar: A Game-Theoretic Approach for Efficient and Scalable Streaming Edge Partitioning</b>. (<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/GraphPartitioning" target="_blank">Code</a>) </li>
-				<li class=MsoNormal><strong><font color=#0aa0c0>[SIGMOD-25] </font></strong>Yongan Xiang<sup>1</sup>, <strong><u>Zezhong Ding</u><sup>1</sup></strong>, Rui Guo, Shangyou Wang, Xike Xie, S. Kevin Zhou, <b> Capsule: An Out-of-Core Training Mechanism for Colossal GNNs</b>. (<a href="https://doi.org/10.1145/3709669" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/Capsule" target="_blank">Code</a>)(<a href="./slides/SIGMOD-Research-16_Capsule.pdf" target="_blank">Slides</a>)(<a href="https://news.ustc.edu.cn/info/1055/90608.htm" target="_blank">Press</a>)</li>
+				<li class=MsoNormal><strong><font color=#0aa0c0>[SIGMOD-24] </font></strong><strong><u>Zezhong Ding</u></strong>, Yongan Xiang, Shangyou Wang, Xike Xie, S. Kevin Zhou, <b>Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning</b>, <i>Proceedings of the ACM on Management of Data (SIGMOD-24)</i>, 2024. (<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/S5P" target="_blank">Code</a>)(<a href="./slides/R31-P4-Ding-1.pdf" target="_blank">Slides</a>)(<a href="https://sz.ustc.edu.cn/xwgg_show/1485.html" target="_blank">Press</a>)</li>	
+				<li class=MsoNormal><strong><font color=#0aa0c0>[TC-25]</font></strong> <strong><u>Zezhong Ding</u></strong>, Deyu Kong, Zhuoxu Zhang, Xike Xie, Jianliang Xu, <b>ClusPar: A Game-Theoretic Approach for Efficient and Scalable Streaming Edge Partitioning</b>, <i>IEEE Transactions on Computers (TC-25)</i>, 2025. (<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/GraphPartitioning" target="_blank">Code</a>)</li>
+				<li class=MsoNormal><strong><font color=#0aa0c0>[SIGMOD-25] </font></strong>Yongan Xiang<sup>1</sup>, <strong><u>Zezhong Ding</u><sup>1</sup></strong>, Rui Guo, Shangyou Wang, Xike Xie, S. Kevin Zhou, <b> Capsule: An Out-of-Core Training Mechanism for Colossal GNNs</b>, <i>Proceedings of the ACM on Management of Data (SIGMOD-25)</i>, 2025. (<a href="https://doi.org/10.1145/3709669" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/Capsule" target="_blank">Code</a>)(<a href="./slides/SIGMOD-Research-16_Capsule.pdf" target="_blank">Slides</a>)(<a href="https://news.ustc.edu.cn/info/1055/90608.htm" target="_blank">Press</a>)</li>
 				<li class=MsoNormal><strong><font color=#0aa0c0>[NeurIPS-25]</font> </strong>Jin Li<sup>1</sup>, <strong><u>Zezhong Ding</u><sup>1</sup></strong>, Xike Xie, <b>DuetGraph: Coarse-to-Fine Knowledge Graph
-Reasoning with Dual-Pathway Global-Local Fusion</b>. (<a href="https://arxiv.org/abs/2507.11229" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/DuetGraph.git" target="_blank">Code</a>)</li>
-				<li class=MsoNormal><strong><font color=#0aa0c0>[SIGMOD-26] </font></strong>Rui Guo<sup>1</sup>, <strong><u>Zezhong Ding</u><sup>1</sup></strong>, Xike Xie, Jianliang Xu, <b> SWIFT: Enabling Large-Scale Temporal Graph Learning on a Single Machine</b>. (<a href="https://dl.acm.org/doi/10.1145/3749184"  target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/SWIFT" target="_blank">Code</a>)</li>
-				<li class=MsoNormal><strong><font color=#0aa0c0>[SIGKDD-26] </font></strong>Huhao Guan<sup>1</sup>, <strong><u>Zezhong Ding</u><sup>1</sup></strong>, Ao Ke, Xike Xie, S. Kevin Zhou, <b>SIGHP: Scalable Information-Guided Hypergraph Partitioner</b>.</li>
+Reasoning with Dual-Pathway Global-Local Fusion</b>, <i>Advances in Neural Information Processing Systems (NeurIPS-25)</i>, 2025. (<a href="https://arxiv.org/abs/2507.11229" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/DuetGraph.git" target="_blank">Code</a>)</li>
+				<li class=MsoNormal><strong><font color=#0aa0c0>[SIGMOD-26] </font></strong>Rui Guo<sup>1</sup>, <strong><u>Zezhong Ding</u><sup>1</sup></strong>, Xike Xie, Jianliang Xu, <b> SWIFT: Enabling Large-Scale Temporal Graph Learning on a Single Machine</b>, <i>Proceedings of the ACM on Management of Data (SIGMOD-26)</i>, 2025. (<a href="https://dl.acm.org/doi/10.1145/3749184"  target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/SWIFT" target="_blank">Code</a>)</li>
+				<li class=MsoNormal><strong><font color=#0aa0c0>[KDD-26] </font></strong>Huhao Guan<sup>1</sup>, <strong><u>Zezhong Ding</u><sup>1</sup></strong>, Ao Ke, Xike Xie, S. Kevin Zhou, <b>SIGHP: Scalable Information-Guided Hypergraph Partitioner</b>, <i>Proc. ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD-26)</i>, 2026. (<a href="https://dl.acm.org/doi/pdf/10.1145/3770854.3780266"  target="_blank">PDF</a>)(<a href="https://doi.org/10.5281/zenodo.18050766" target="_blank">Code</a>)</li>
 
 				<!-- <li class=MsoNormal>
 					<strong><font color=#0aa0c0>📄[TC-25] </font></strong>
@@ -413,24 +405,6 @@ Reasoning with Dual-Pathway Global-Local Fusion</b>,
 		</div>
 	</div>
 
-	<script>
-	// --- JavaScript for Collapsible Functionality (Optimized) ---
-	var toggles = document.getElementsByClassName("research-category-toggle");
-	for (var i = 0; i < toggles.length; i++) {
-		toggles[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-			var content = this.nextElementSibling;
-			
-			// Use a class to control the open state for smoother animation
-			if (content.classList.contains('open')) {
-				content.classList.remove('open');
-				content.style.maxHeight = null;
-			} else {
-				content.classList.add('open');
-				content.style.maxHeight = content.scrollHeight + "px";
-			} 
-		});
-	}
-	</script>
+
 </body>
 </html>
