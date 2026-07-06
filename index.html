@@ -185,6 +185,13 @@
 		.research-content-panel ul li { list-style-type: none; padding: 4px 0; margin-bottom: 6px; }
 		.research-content-panel ul li ul { padding-left: 20px; margin-top: 5px; }
 		.research-content-panel ul li ul li { margin-bottom: 5px; }
+			.research-section > li > strong a {
+				color: #3477D5;
+				text-decoration: none;
+			}
+			.research-section > li > strong a:hover {
+				text-decoration: underline;
+			}
 
 			/* --- Talks List Styles --- */
 			.talks-list {
@@ -247,7 +254,7 @@
 			<br>
 			<a target="_blank" href="https://scholar.google.com/citations?hl=en&user=k2P5VakAAAAJ">Google Scholar</a>,       	
 			<a target="_blank" href="https://github.com/zezhongding">Github</a>,
-			<a target="_blank" href="resume.pdf">CV (PDF)</a><br>
+			<a target="_blank" href="resume.pdf">CV</a><br>
 			</p>
 			 
 			<img src="./ustcblue.jpg" width="75" height="75" alt="picture"/>
@@ -257,31 +264,33 @@
             <p >  Zezhong (aka Zeddy) is a Ph.D. candidate (successive master-doctor program since 2022) in the <a target="ddl" href="ddl.html">Data Darkness Lab (DDL)</a> at the <a target="_blank" href="https://saids.ustc.edu.cn/main.htm">School of Artificial Intelligence and Data Science</a>,
 				<a target="_blank" href="https://www.ustc.edu.cn/">University of Science and Technology of China (USTC)</a>, 
 				supervised by <a target="_blank" href="http://staff.ustc.edu.cn/~xkxie/">Prof. Xike Xie</a>. He was a visiting student at the <a target="_blank" href="https://www.comp.hkbu.edu.hk/">Department of Computer Science, Hong Kong Baptist University</a>, from 2024 to 2025, working with <a target="_blank" href="https://www.comp.hkbu.edu.hk/~xujl/">Prof. Jianliang Xu</a>. He received his B.Eng. (Hons) degree in Computer Science and Technology from <a target="_blank" href="https://www.ouc.edu.cn/">Ocean University of China</a> in 2022. He has published several research papers in prestigious conferences and journals such as <a target="_blank" href="https://sigmod.org/">SIGMOD</a>, <a target="_blank" href="https://supercomputing.org/">SC</a>, <a target="_blank" href="https://neurips.cc/">NeurIPS</a>, <a target="_blank" href="https://icml.cc/">ICML</a>, <a target="_blank" href="https://www.kdd.org/">KDD</a>, <a target="_blank" href="https://aclanthology.org/venues/acl/">ACL</a>, and <a target="_blank" href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=12">TC</a>.
-			His research focuses on <strong>data management</strong>, <strong>machine learning</strong>, and <strong>computer systems</strong> over big data and large models, in particular, big graphs and foundation models.
 			</p>
             <p><strong><font>$ echo "📌Welcome to contact me for any discussion!</font></strong>😊"</p>
 			<hr>
 			<!-- ================== RESEARCH INTERESTS SECTION START ================== -->
 			<h3><a name="research">$ head research_interests</a></h3>
 			<section class="research-section">
+				His research focuses on data management, machine learning, and computer systems over big data and large models, in particular, big graphs and foundation models. 
+				<br>
+				<strong>Recent and current research projects and interests include:</strong>
 							<li>
-								🎯<strong>Graph Foundation Models & Relational Graph Learning</strong>
-								<ul>
+								🎯<strong><a href="research/graph_foundation_models.html">Graph Foundation Models</a> & <a href="research/relational_graph_learning.html">Relational Graph Learning</a></strong>
+								<!-- <ul>
 									<li>Graph Foundation Models: [<a href="https://arxiv.org/pdf/2605.09993" target="_blank"><font color=#0aa0c0>R-GFM, <strong>ICML-26</strong></font></a>]</li>
 									<li>Relational Graph Learning: [<a href="https://arxiv.org/abs/2605.15575" target="_blank"><font color=#0aa0c0>GelGT, <strong>arXiv-26</strong></font></a>]</li>
-								</ul>
+								</ul> -->
 							</li>
 							<li>
-								🎯<strong>Graph Transformers & Imbalanced Graph Learning</strong>
-								<ul>
+								🎯<strong><a href="research/graph_transformers.html">Graph Transformers</a> & <a href="research/imbalanced_graph_learning.html">Imbalanced Graph Learning</a></strong>
+								<!-- <ul>
 									<li>Knowledge Graph Transformers: [<a href="https://arxiv.org/abs/2507.11229" target="_blank"><font color=#0aa0c0>DuetGraph, <strong>NeurIPS-25</strong></font></a>]</li>
 									<li>Imbalanced Graph Learning: [<a href="https://www.arxiv.org/pdf/2507.13741" target="_blank"><font color=#0aa0c0>SamGoG, <strong>KDD-26</strong></font></a>]</li>
-								</ul>
+								</ul> -->
 							</li>
-							<li>🎯<strong>Graph Machine Learning Systems</strong>
-								<ul>
+							<li>🎯<strong><a href="research/graph_machine_learning_systems.html">Graph Machine Learning Systems</a></strong>
+								<!-- <ul>
 									<li>Out-of-Core Graph Training: [<a href="https://doi.org/10.1145/3709669" target="_blank"><font color=#0aa0c0>Capsule, <strong>SIGMOD-25</strong></font></a>],[<a href="https://dl.acm.org/doi/10.1145/3749184" target="_blank"><font color=#0aa0c0>SWIFT, <strong>SIGMOD-26</strong></font></a>]</li>
-								</ul>
+								</ul> -->
 							</li>
 							<!-- <li>
 								🎯<strong>LLM Reasoning Algorithms</strong>
@@ -297,11 +306,11 @@
 									<li>Message Passing Neural Networks: [<a href="https://www.arxiv.org/pdf/2507.13741" target="_blank"><font color=#0aa0c0>SamGoG, <strong>arXiv-25</strong></font></a>]</li>
 								</ul>
 							</li> -->
-							<li>🎯<strong>Graph Partitioning Algorithms for Distributed Computing</strong>
-								<ul>
+							<li>🎯<strong><a href="research/graph_partitioning.html">Graph Partitioning Algorithms for Distributed Computing</a></strong>
+								<!-- <ul>
 									<li> Graph Partitioning (Streaming): [<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank"><font color=#0aa0c0>S5P, <strong>SIGMOD-24</strong></font></a>], [<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank"><font color=#0aa0c0>ClusPar, <strong>TC-25</strong></font></a>]</li>
 									<li> Hypergraph Partitioning: [<a href="https://dl.acm.org/doi/pdf/10.1145/3770854.3780266" target="_blank"><font color=#0aa0c0>SIGHP, <strong>KDD-26</strong></font></a>]</li>	
-								</ul>
+								</ul> -->
 							</li>
 				<!-- <article class="research-category">
 					<h4 class="research-category-toggle">📊 Graph Data Management</h4>
@@ -358,9 +367,9 @@
 			<h3><a name="news">$ tail news</a></h3>  
 			<div class="news-box">  
 				<ul class="news-list">
-					<li><span class="news-date">2026/7/2</span><span class="news-content">One paper is accepted by the <b>SC 2026</b> (Chicago, USA)! This is my first time publishing a paper in a systems conference.</span></li>
-					<li><span class="news-date">2026/5/16</span><span class="news-content">One paper is accepted by the <b>KDD 2026</b> (Jeju, South Korea)!</span></li>
-					<li><span class="news-date">2026/5/1</span><span class="news-content">One paper is accepted by the <b>ICML 2026</b> (Seoul, South Korea)!</span></li>
+					<li><span class="news-date">2026/7/2</span><span class="news-content">One paper is accepted by <b>SC 2026</b> (Chicago, USA)! This is my first time publishing a paper in a systems conference.</span></li>
+					<li><span class="news-date">2026/5/16</span><span class="news-content">One paper is accepted by <b>KDD 2026</b> (Jeju, South Korea)!</span></li>
+					<li><span class="news-date">2026/5/1</span><span class="news-content">One paper is accepted by <b>ICML 2026</b> (Seoul, South Korea)!</span></li>
 					<li><span class="news-date">2026/4/7</span><span class="news-content">One paper is accepted by the <b>Findings of ACL 2026</b>.</span></li>
 					<li><span class="news-date">2025/11/24</span><span class="news-content">One paper is accepted by <b>KDD 2026</b> (Jeju, South Korea)!</span></li>
 					<li><span class="news-date">2025/9/18</span><span class="news-content">One paper is accepted by <b>NeurIPS 2025</b> (San Diego Convention Center & Mexico City)!</span></li>
