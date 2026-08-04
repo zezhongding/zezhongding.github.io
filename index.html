@@ -236,7 +236,17 @@
 			.talk-slides:hover {
 				text-decoration: underline;
 			}
-
+			.oral {
+				color: #d62728;
+				font-style: italic;
+				font-weight: 600;
+				white-space: nowrap;
+				}
+.award {
+  color: #d62728;
+  font-style: italic;
+  font-weight: 600;
+}
 	</style>
 	<title>Zezhong Ding's Homepage</title>
 </head>
@@ -250,9 +260,9 @@
 			<li><a href="#news">News</a></li>
 			<li><a href="#pub">Publications</a></li>
 			<li><a href="#awards">Awards</a></li>
-			<li><a href="#talks">Talks</a></li>
+			<!-- <li><a href="#talks">Talks</a></li> -->
 			<li><a target="Gallery" href="photo.html">Gallery</a></li>
-			<li><a target="Experience" href="experience.html">Experience</a></li>
+			<!-- <li><a target="Experience" href="experience.html">Experience</a></li> -->
 			<li><a target="_blank" href="resume.pdf">CV</a></li>
 		</div>
 		<div class="content">
@@ -384,6 +394,7 @@
 			<h3><a name="news">$ tail news</a></h3>  
 			<div class="news-box">  
 				<ul class="news-list">
+					<li><span class="news-date">2026/7/22</span><span class="news-content">Our SC26 paper, DOLPHIN, has been <b>nominated</b> by the HPC for Machine Learning Area for the <b>Best Student Paper Award</b>!</span></li>
 					<li><span class="news-date">2026/7/2</span><span class="news-content">One paper is accepted by <b>SC 2026</b> (Chicago, USA)! This is my first time publishing a paper in a systems conference.</span></li>
 					<li><span class="news-date">2026/5/16</span><span class="news-content">One paper is accepted by <b>KDD 2026</b> (Jeju, South Korea)!</span></li>
 					<li><span class="news-date">2026/5/1</span><span class="news-content">One paper is accepted by <b>ICML 2026</b> (Seoul, South Korea)!</span></li>
@@ -403,7 +414,7 @@
 			</div>
 			<hr>
 
-			<h3><a name="pub">$ head -10 publications</a></h3>
+			<h3><a name="pub">$ head publications</a></h3>
 				You can find the full list of my publications on <a href="https://scholar.google.com/citations?hl=en&user=k2P5VakAAAAJ">my Google Scholar profile</a>.
 				<!-- You can find the full list of my publications <a href="pub.html">here</a> -->
 				<!-- , my DBLP entry <a href="https://dblp.org/pid/371/4832.html">here</a> and  -->
@@ -419,7 +430,7 @@
 				<li class=MsoNormal><strong><font color=#0aa0c0>[SIGMOD-25] </font></strong>Yongan Xiang<sup>1</sup>, <strong><u>Zezhong Ding</u><sup>1</sup></strong>, Rui Guo, Shangyou Wang, Xike Xie*, S. Kevin Zhou, <b> Capsule: An Out-of-Core Training Mechanism for Colossal GNNs</b>, <i>Proceedings of the ACM on Management of Data (SIGMOD-25)</i>, 2025. (<a href="https://doi.org/10.1145/3709669" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/Capsule" target="_blank">Code</a>)(<a href="./slides/SIGMOD-Research-16_Capsule.pdf" target="_blank">Slides</a>)(<a href="https://news.ustc.edu.cn/info/1055/90608.htm" target="_blank">Press</a>)</li>
 				<li class=MsoNormal><strong><font color=#0aa0c0>[SIGMOD-26] </font></strong>Rui Guo<sup>1</sup>, <strong><u>Zezhong Ding</u><sup>1</sup></strong>, Xike Xie*, Jianliang Xu, <b> SWIFT: Enabling Large-Scale Temporal Graph Learning on a Single Machine</b>, <i>Proceedings of the ACM on Management of Data (SIGMOD-26)</i>, 2025. (<a href="https://dl.acm.org/doi/10.1145/3749184"  target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/SWIFT" target="_blank">Code</a>)</li>
 				<li class=MsoNormal><strong><font color=#0aa0c0>[SC-26]</font></strong> <strong><u>Zezhong Ding</u></strong>, Rui Guo, Wenbo Zhen, Junlin Lv, Jianliang Xu, Xike Xie*,
-                <b>DOLPHIN: Scalable Disk–RAM–GPU Pipelined Training for Massive Temporal GNNs</b>, <i>Proc. High Performance Computing, Networking, Storage, and Analysis (SC-26)</i>, 2026. (<a href="#" onclick="alert('The PDF will be released soon.'); return false;" target="_blank">PDF</a>)(<a href="#" onclick="alert('The code will be released soon.'); return false;" target="_blank">Code</a>)
+                <b>DOLPHIN: Scalable Disk–RAM–GPU Pipelined Training for Massive Temporal GNNs</b>, <i>Proc. High Performance Computing, Networking, Storage, and Analysis (SC-26)</i>, 2026. (<a href="#" onclick="alert('The PDF will be released soon.'); return false;" target="_blank">PDF</a>)(<a href="#" onclick="alert('The code will be released soon.'); return false;" target="_blank">Code</a>) <span class="award">Best Student Paper Finalist</span></li>
 				<li class=MsoNormal><strong><font color=#0aa0c0>[TC-25]</font></strong> <strong><u>Zezhong Ding</u></strong>, Deyu Kong, Zhuoxu Zhang, Xike Xie*, Jianliang Xu, <b>ClusPar: A Game-Theoretic Approach for Efficient and Scalable Streaming Edge Partitioning</b>, <i>IEEE Transactions on Computers (TC-25)</i>, 2025. (<a href="https://doi.org/10.1109/TC.2024.3475568" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/GraphPartitioning" target="_blank">Code</a>)</li>
 				<li class=MsoNormal><strong><font color=#0aa0c0>[NeurIPS-25]</font> </strong>Jin Li<sup>1</sup>, <strong><u>Zezhong Ding</u><sup>1</sup></strong>, Xike Xie*, <b>DuetGraph: Coarse-to-Fine Knowledge Graph
 Reasoning with Dual-Pathway Global-Local Fusion</b>, <i>Advances in Neural Information Processing Systems (NeurIPS-25)</i>, 2025. (<a href="https://arxiv.org/abs/2507.11229" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/DuetGraph.git" target="_blank">Code</a>)</li>
@@ -430,10 +441,11 @@ Reasoning with Dual-Pathway Global-Local Fusion</b>, <i>Advances in Neural Infor
 				
 					<!-- (<a href="xxxx"  target="_blank">PDF</a>)(<a href="xxxx" target="_blank">Code</a>)</li> -->
 				<li class=MsoNormal><strong><font color=#0aa0c0>[KDD-26] </font></strong>Huhao Guan<sup>1</sup>, <strong><u>Zezhong Ding</u><sup>1</sup></strong>, Ao Ke, Xike Xie*, S. Kevin Zhou, <b>SIGHP: Scalable Information-Guided Hypergraph Partitioner</b>, <i>Proc. ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD-26)</i>, 2026. (<a href="https://dl.acm.org/doi/pdf/10.1145/3770854.3780266"  target="_blank">PDF</a>)(<a href="https://doi.org/10.5281/zenodo.18050766" target="_blank">Code</a>)</li>
-				<li class=MsoNormal><strong><font color=#0aa0c0>[arXiv-26]</font></strong> <strong><u>Zezhong Ding</u></strong>, Jin Li, Xugang Wang, Xike Xie*,
-                <b>Gaussian Relational Graph Transformer</b>.
-                (<a href="https://arxiv.org/abs/2605.15575" target="_blank">PDF</a>)(<a href="#" onclick="alert('The code will be released soon.'); return false;" target="_blank">Code</a>)
 				
+				<!-- <li class=MsoNormal><strong><font color=#0aa0c0>[arXiv-26]</font></strong> <strong><u>Zezhong Ding</u></strong>, Jin Li, Xugang Wang, Xike Xie*,
+                <b>Gaussian Relational Graph Transformer</b>.
+                (<a href="https://arxiv.org/abs/2605.15575" target="_blank">PDF</a>)(<a href="#" onclick="alert('The code will be released soon.'); return false;" target="_blank">Code</a>) -->
+				<li class=MsoNormal><strong><font color=#0aa0c0>[ACL-25] </font></strong>Yukun Cao, Shuo Han, Zengyi Gao, <strong><u>Zezhong Ding</u></strong>, Xike Xie*, S. Kevin Zhou, <b> GraphInsight: Unlocking Insights in Large Language Models for Graph Structure Understanding</b>, <i>Proc. Annual Meeting of the Association for Computational Linguistics (ACL-25)</i>, 2025. (<a href="https://arxiv.org/abs/2409.03258" target="_blank">PDF</a>)(<a href="https://github.com/shuohanai/GraphInsight" target="_blank">Code</a>)
 				
 					
 				<!-- <li class=MsoNormal>
@@ -457,7 +469,7 @@ Reasoning with Dual-Pathway Global-Local Fusion</b>,
 	
 			
 			
-			<h3><a name="talks">$ head talks</a></h3>
+			<!-- <h3><a name="talks">$ head talks</a></h3>
 			<ul class="talks-list">
 				<li>
 					<span class="talk-title">"Capsule: An Out-of-Core Training Mechanism for Colossal GNNs",</span>
@@ -476,13 +488,13 @@ Reasoning with Dual-Pathway Global-Local Fusion</b>,
 					</span>
 				</li>
 			</ul>
-			<hr>
+			<hr> -->
 
 			<h3><a name="services">$ cat academic_services</a></h3>
 			<ul>
 				<li>
 			<strong>Reviewer:</strong>
-			NeurIPS 2026; ICML 2026; SIGMOD 2025 (ARI); TKDD 2024
+			NeurIPS 2026; ICML 2026; SIGMOD 2025 (ARI)
 			</li>
 			<li><strong>External Reviewer:</strong>
 			VLDB(J) 2026; NeurIPS 2024; ICDE 2024; ICDE 2025; ICDE 2026; SIGIR 2022</li>
@@ -491,6 +503,7 @@ Reasoning with Dual-Pathway Global-Local Fusion</b>,
 			
 			<h3><a name="awards">$ head awards</a></h3>
 			<ul>
+				<li><strong>SC Best Student Paper Finalist</strong>, <a href="https://sc26.supercomputing.org/" target="_blank">SC</a> (2026)</li>
 				<li><strong>National Scholarship</strong>, <a href="http://en.moe.gov.cn/" target="_blank">Ministry of Education (China)</a> (2019, 2021, and 2024)</li>
 				<li><strong>Gold Medal </strong>, <a href="https://igem.org/" target="_blank">International Genetically Engineered Machine Competition (USA)</a> (2021)</li>
 				<li><strong>Finalist (Nomination for the Outstanding Award)</strong>, <a href="https://www.comap.com/contests/mcm-icm" target="_blank">MCM (USA)</a> (Top 1%, 2021)</li>
@@ -498,7 +511,7 @@ Reasoning with Dual-Pathway Global-Local Fusion</b>,
 			</ul>
 			<hr>
 
-			<h3><a name="TE">$ cat teaching_experiences</a></h3>
+			<!-- <h3><a name="TE">$ cat teaching_experiences</a></h3>
 			<ul>
 				<li>
 					<strong>Undergraduate Teaching Assistant (TA) at Ocean University of China:</strong>
@@ -510,7 +523,7 @@ Reasoning with Dual-Pathway Global-Local Fusion</b>,
 					Numerical Analysis (2021)
 				</li>
 			</ul>
-			<hr>	
+			<hr>	 -->
 
 			
 			<!-- <h3><a name="hobbies">$ cat misc</a></h3>
@@ -520,7 +533,7 @@ Reasoning with Dual-Pathway Global-Local Fusion</b>,
 			<hr> -->
 			<h3><a>$ info life</a></h3>
 			<ul>
-			<li><strong>💌<a name="love" class="fancy-font2">Love: Ariel</a> 🏡<a name="hometown" class="fancy-font2">Hometown: Xindu, Chengdu&Panzhihua@Sichuan</a></strong></li> 
+			<li><strong>💌<a name="love" class="fancy-font2">Love: Ariel</a> 🏡<a name="hometown" class="fancy-font2">Hometown: Sichuan, China</a></strong></li> 
 			</ul> 
 			<hr>
 
@@ -529,7 +542,7 @@ Reasoning with Dual-Pathway Global-Local Fusion</b>,
 			<!-- <div style="padding-bottom: 200px;"></div>  -->
 			<!-- Add space at the bottom -->
 			<!-- New: Last Update Section -->
-            <p style="font-size: 12px; color: #777; text-align: left; margin-top: 20px;">Last Update: 2026-07-19</p>
+            <p style="font-size: 12px; color: #777; text-align: left; margin-top: 20px;">Last Update: 2026-08-04</p>
 		</div>
 	</div>
 
