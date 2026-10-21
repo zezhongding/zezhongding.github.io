@@ -11,6 +11,7 @@ a:focus-visible,summary:focus-visible { outline:2px solid var(--accent); outline
 .sidebar1 li { list-style:none; padding:5px 0; font-size:13px; }
 .sidebar1 li a { color:#536174; }
 .content { min-width:0; overflow-wrap:anywhere; }
+.mobile-portrait { display:none; }
 h1 { margin:0; color:#192c43; font:500 clamp(34px,4vw,46px)/1.2 var(--font-heading); letter-spacing:-.035em; }
 .chinese-name { display:inline-block; margin-left:12px; color:#536174; font-family:"STKaiti","KaiTi","楷体","Kaiti SC","Noto Serif CJK SC",serif; font-size:26px; font-weight:400; line-height:1.4; letter-spacing:.12em; vertical-align:baseline; white-space:nowrap; }
 .phd-title { margin:12px 0; color:#536174; font-size:15px; }
@@ -36,18 +37,28 @@ li { padding:7px 0; }
 .fancy-font2 { color:var(--muted); font-size:13px; font-weight:400; }
 @media(max-width:800px) { .container { padding:36px 26px; grid-template-columns:145px minmax(0,1fr); gap:32px; } .sidebar1 img { width:145px; } }
 @media(max-width:600px) {
-  .container { display:block; padding:24px 20px 36px; }
-  .sidebar1 { position:static; margin-bottom:26px; }
-  .sidebar1 img { width:100px; margin:0 0 16px; }
+  body { font-size:15px; line-height:1.7; }
+  .container { display:flex; flex-direction:column; padding:24px 20px 36px; gap:24px; }
+  .content { order:0; width:100%; }
+  .sidebar1 { position:static; order:1; width:100%; margin:0; padding-top:16px; border-top:1px solid var(--line); }
+  .sidebar1 > img { display:none; }
+  .profile-header { display:grid; grid-template-columns:90px minmax(0,1fr); align-items:center; gap:18px; }
+  .mobile-portrait { display:block; width:90px; height:auto; border-radius:3px; }
+  .profile-header > div { min-width:0; }
   .sidebar1 ul { display:flex; flex-wrap:wrap; gap:4px 18px; }
   .sidebar1 li { padding:0; font-size:13px; }
   .sidebar1 li a { display:inline-block; padding:8px 0; }
-  h1 { font-size:34px; }
-  .chinese-name { font-size:22px; margin-left:8px; }
+  h1 { font-size:30px; letter-spacing:-.025em; }
+  .chinese-name { display:block; font-size:21px; margin:6px 0 0; }
+  .phd-title { margin:8px 0 0; font-size:13px; line-height:1.55; }
   .profile-links { gap:4px 18px; align-items:center; }
   .profile-links > a, .wechat-contact > summary { display:inline-block; padding:8px 0; }
   .news-list li { grid-template-columns:76px minmax(0,1fr); gap:8px; }
   .award { margin-left:0; }
+  .pub li { font-size:14px; line-height:1.7; padding:16px 0; }
+  .pub li > b { font-family:var(--font-body); font-size:16px; line-height:1.5; }
+  h3 { font-size:25px; }
+  hr { margin:24px 0; }
 }
 @media(max-width:360px) {
   .container { padding-inline:16px; }

@@ -2,6 +2,7 @@
 <html lang='en'>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Full Publications of Zezhong Ding</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
@@ -123,6 +124,23 @@
     margin-right: 10px;
     margin-top: 2px;
 }
+        * { box-sizing: border-box; }
+        .container { width: min(940px, calc(100% - 32px)); }
+        @media (max-width: 600px) {
+            body { background: #fff; font: 15px/1.7 Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
+            .container { width: 100%; margin: 0 auto; padding: 20px 18px 32px; border-radius: 0; box-shadow: none; overflow-wrap: anywhere; }
+            .home-btn { margin: 0 0 12px; padding: 8px 0; background: transparent; color: #254f78; font-size: 14px; box-shadow: none; border-radius: 0; }
+            .home-btn:hover { background: transparent; transform: none; text-decoration: underline; }
+            h1 { margin: 6px 0 18px; text-align: left; font: 600 28px/1.25 Georgia, serif; letter-spacing: 0; color: #192c43; }
+            .notice { padding: 12px; margin: 16px 0 24px; font-size: 13px; box-shadow: none; }
+            .notice > span:last-child { min-width: 0; }
+            .notice-icon { flex-shrink: 0; }
+            .year-heading { padding: 8px 0; margin: 24px 0 0; background: none; border: 0; border-bottom: 1px solid #e4e8ed; border-radius: 0; color: #254f78; letter-spacing: 0; }
+            .pub li { margin: 0; padding: 18px 0; background: none; border: 0; border-bottom: 1px solid #e4e8ed; border-radius: 0; box-shadow: none; font-size: 14px; color: #536174; }
+            .pub li:hover { background: none; }
+            .pub li > b { display: block; margin: 5px 0; font-size: 16px; line-height: 1.5; color: #253044; }
+            .pub strong, .pub a { color: #254f78; }
+        }
     </style>
 </head>
 <body>
@@ -137,11 +155,11 @@
     <span class="notice-icon">ℹ️</span>
     <span>
         Publications are listed by category in reverse chronological order.
-        Copyright and all associated rights remain with the authors or relevant copyright holders (e.g., <a href="https://www.acm.org/" target="_blank" style="color:#b85c00;text-decoration:underline;">ACM</a> and 
+        Copyright and all associated rights remain with the authors or relevant copyright holders (e.g., <a href="https://www.acm.org/" target="_blank" style="color:#b85c00;text-decoration:underline;">ACM</a> and
         <a href="https://www.ieee.org/" target="_blank" style="color:#b85c00;text-decoration:underline;">IEEE</a>).
     </span>
 </div>
-   
+
         <div class="year-heading">Preprint</div>
         <ul class='pub'>
             <li>
@@ -204,7 +222,7 @@ Reasoning with Dual-Pathway Global-Local Fusion</b>, <i>Advances in Neural Infor
         <ul class='pub'>
             <li>
                 📄<strong>[SIGMOD-24]</strong> <strong><u>Zezhong Ding</u></strong>, Yongan Xiang, Shangyou Wang, Xike Xie*, S. Kevin Zhou,
-                <b>Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning</b>, <i>Proceedings of the ACM on Management of Data (SIGMOD-24)</i>, 2024. (<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/S5P" target="_blank">Code</a>)(<a href="./slides/R31-P4-Ding-1.pdf" target="_blank">Slides</a>)(<a href="https://sz.ustc.edu.cn/xwgg_show/1485.html" target="_blank">Press</a>)</li>	
+                <b>Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning</b>, <i>Proceedings of the ACM on Management of Data (SIGMOD-24)</i>, 2024. (<a href="https://dl.acm.org/doi/10.1145/3654965" target="_blank">PDF</a>)(<a href="https://github.com/USTC-DataDarknessLab/S5P" target="_blank">Code</a>)(<a href="./slides/R31-P4-Ding-1.pdf" target="_blank">Slides</a>)(<a href="https://sz.ustc.edu.cn/xwgg_show/1485.html" target="_blank">Press</a>)</li>
             </li>
         </ul>
     </div>
